@@ -1,0 +1,23 @@
+[ 2015-11-18T11:41:23+08:00 ] ::1 /embahust/index.php/Admin/index/addtea.html
+ERR: 1048:Column 'info' cannot be null
+ [ SQL语句 ] : INSERT INTO `teacher` (`name`,`info`,`class_id`) VALUES ('',NULL,'1')
+
+[ 2015-11-18T11:41:41+08:00 ] ::1 /embahust/index.php/Admin/index/addtea.html
+ERR: 1048:Column 'info' cannot be null
+ [ SQL语句 ] : INSERT INTO `teacher` (`name`,`info`,`class_id`) VALUES ('',NULL,'1')
+
+[ 2015-11-18T16:16:17+08:00 ] ::1 /embahust/index.php/Admin/index/panels-wells.html
+ERR: 非法操作:panels-wells
+
+[ 2015-11-18T17:02:43+08:00 ] ::1 /embahust/index.php/Admin/index/showtea?name=cvx
+ERR: 参数错误或者未定义:id
+
+[ 2015-11-18T17:02:47+08:00 ] ::1 /embahust/index.php/Admin/index/showtea?name=cvx
+ERR: 参数错误或者未定义:id
+
+[ 2015-11-18T17:06:24+08:00 ] ::1 /embahust/index.php/Admin/index/showted.html
+ERR: 非法操作:showted
+
+[ 2015-11-18T17:06:28+08:00 ] ::1 /embahust/index.php/Admin/index/showted.html
+ERR: 非法操作:showted
+

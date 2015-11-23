@@ -1,0 +1,67 @@
+<h3>欢迎{:session('username')}管理员登录该管理系统</h3>
+	
+
+<div class="alert alert-success alert-dismissable">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	该系统是建立在{$Think.server.server_addr}服务器上。
+	
+</div>
+<div class = 'alert alert-info alert-dismissable'>
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	以下为本系统管理员信息变更方法：
+	<p style="text-indent: 2pc;">输入原密码之后，选择初始化，会将管理员密码初始化为123456。</p>
+	<p style="text-indent: 2pc;">输入原密码，并输入新的密码，会对管理员帐号密码进行修改。</p>
+</div>
+<form action={:U('index/xiugai')} method="post">
+	<div class ='row'>
+		<div class="col-lg-4">
+			<input style="float: left;" class = "form-control"type="text" name = 'opassword' placeholder = '请输入原密码' >
+		</div>
+		<div class="col-lg-4">
+			<input style="float: left;" class = "form-control"type="password" name = 'npassword'placeholder='请输入新的密码' >
+		</div>
+		<div class="col-lg-4">
+			<input style="float: left;" class = "form-control"type="password" placeholder = '请再次输入新的密码' >	
+		</div>
+
+	</div>
+	
+	<input type="hidden" value="" name = 'state'>
+	<input id = 'sub'class = 'btn btn-info 'type="submit" value = '修改密码'>
+	<input id = 'ini'class = 'btn btn-info'type="submit" value = '初始化密码'>
+	<br/>
+	<div class = 'bg-danger ' style="margin-top:10px; " id='error'>{$error|default=''}</div>
+
+
+</form>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#sub').click(function(){
+		if($('input').eq(0).val() == ''){
+			$('#error').text('请输入原密码');
+			return false;
+		}
+		else if($('input').eq(1).val() == ''){
+			$('#error').text('请输入新密码');	
+			return false;
+		}
+		else if($('input').eq(1).val() !== $('input').eq(2).val()){
+			$('#error').text('两次新密码输入不相同');
+			return false;
+		}
+		
+		return true;
+	});
+	$('#ini').click(function(){
+		if($('input').eq(0).val() == ''){
+			$('#error').text('请输入原密码');
+			return false;
+		}else {
+			$('input').eq(3).val(1);
+			return true;
+		}
+	});
+});
+	
+	
+</script>

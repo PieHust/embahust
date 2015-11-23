@@ -1,0 +1,24 @@
+[ 2015-11-20T15:09:12+08:00 ] ::1 /embahust/index.php/Admin/index/showted.html
+ERR: 非法操作:showted
+
+[ 2015-11-20T15:14:19+08:00 ] ::1 /embahust/index.php/Admin/index/addtea.html
+ERR: 1048:Column 'info' cannot be null
+ [ SQL语句 ] : INSERT INTO `teacher` (`name`,`info`,`class_id`) VALUES ('',NULL,'1')
+
+[ 2015-11-20T15:14:23+08:00 ] ::1 /embahust/index.php/Admin/index/addtea.html
+ERR: 1048:Column 'info' cannot be null
+ [ SQL语句 ] : INSERT INTO `teacher` (`name`,`info`,`class_id`) VALUES ('',NULL,'1')
+
+[ 2015-11-20T15:46:30+08:00 ] ::1 /embahust/index.php/Admin/index/showtea?id=10
+ERR: 1054:Unknown column '$id' in 'where clause'
+ [ SQL语句 ] : UPDATE `teacher` SET `name`='fadsfasdffa',`info`='<p>fasdf<img src=\"http://himg2.huanqiu.com/attachment2010/2015/1117/20151117092240894.jpg\"/></p>',`class_id`='1' WHERE ( id = $id )
+
+[ 2015-11-20T15:50:47+08:00 ] ::1 /embahust/index.php/Admin/index/panels-wells.html
+ERR: 非法操作:panels-wells
+
+[ 2015-11-20T15:53:59+08:00 ] ::1 /embahust/index.php/Admin/index/panels-wells.html
+ERR: 非法操作:panels-wells
+
+[ 2015-11-20T15:54:15+08:00 ] ::1 /embahust/index.php/Admin/index/panels-wells.html
+ERR: 非法操作:panels-wells
+

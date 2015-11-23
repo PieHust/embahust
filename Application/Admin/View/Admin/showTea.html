@@ -1,0 +1,48 @@
+ <br/> 
+ <br/> 
+ <br/> 
+ <h3 align="center">教师信息修改</h3>
+ <form action="__MODULE__/index/showtea?id={$arr.id}"method = 'post'>
+     <div class="row">
+         <div class = 'col-md-2'></div>
+         <div class = 'col-md-3'>
+             <input type="text" name ='name' value={$arr.name} class="form-control"> 
+             <br></div>
+        <div class='col-md-3'>
+            <select class='form-control' name ='state'>
+                <option value="1">院校名师</option>
+                <option value="2">专家学者</option>
+            </select>
+        </div>
+     </div>
+     <div class="row">
+         <div class = 'col-md-2'></div>
+         <div class = 'col-md-8'>
+
+             <script id="uecontainer" name="info" type="text/plain" style=''>{$arr.info}</script>
+         </div>
+
+     </div>
+     <br> 
+     <div class="row">
+         <div class = 'col-md-2'></div>
+         <div class = 'col-md-8'>
+             <input type="submit" class="btn btn-info" value="保存"></div>
+
+     </div>
+
+ </form>
+
+ <!-- 配置文件 --> 
+ <script type="text/javascript" src="__PUBLIC__/editor/ueditor.config.js"></script>
+ <!-- 编辑器源码文件 --> 
+ <script type="text/javascript" src="__PUBLIC__/editor/ueditor.all.js"></script>
+ <!-- 实例化编辑器 --> 
+ <script type="text/javascript">var ue = UE.getEditor('uecontainer');</script>
+ <script type="text/javascript">
+    $('document').ready(function(){
+         var index ={$arr.class_id} - 1;
+         $('option').get(index).selected = true;
+    });
+   
+ </script>
