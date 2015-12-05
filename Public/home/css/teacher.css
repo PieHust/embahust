@@ -1,0 +1,78 @@
+/* 去掉点击按钮或链接后出现虚线边框 */
+a, button{
+	outline: none;
+}
+::-moz-focus-inner{
+	border: none;
+}
+
+
+/* teacher-pics */
+.teacher-pics{
+	background-color: #f6f6f6;
+	color: #333;
+	border: 1px solid #e9d1d1;
+}
+.pics-wrapper{
+	margin: 0 auto;
+	width: 700px;
+	min-height: 600px;
+}
+#show-pic{
+	display: block;
+}
+.pics-wrapper li{
+	width: 160px;
+	float: left;
+	margin: 24px 0 0 50px;
+}
+.pics-wrapper li img{
+	width: 165px;
+	height: 190px;
+}
+.pics-wrapper li p{
+	font-size: 14.67px;
+	font-family: "Microsoft Yahei",sans-serif;
+	text-align: center;
+	line-height: 30px;
+}
+.pics-wrapper li p a:link, .pics-wrapper li p a:visited{
+	color: #000;
+	border-bottom: 1px dotted #666;
+}
+.pics-wrapper li p a:hover{
+	color: red;
+	border-bottom: none;
+}
+
+
+
+/* other-info */
+.other-info{
+	margin-top: 35px;
+	height: 90px;
+}
+.contact-info{
+	text-align: center;
+	font-size: 16px;
+	line-height: 26.88px;
+	color: #d31515;
+}
+
+
+/* btn-wrap */
+.btn-wrap{
+	margin: 30px 0 20px 0;
+	text-align: center;
+}
+.btn-wrap button{
+	background-color: #f6f6f6;
+	border: 1px solid #d1d1d1;
+	padding: 1px 6.5px;
+	margin: 0 2px;
+	font-size: 15px;
+}
+.btn-wrap button.previous-page{
+	border: 1px solid #f6f6f6;
+	cursor: text;
+}

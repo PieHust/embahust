@@ -74,7 +74,7 @@
                     <ul class="nav" id="side-menu">
 
                         <li>
-                            <a href="index.html">
+                            <a href=<?php echo U(index);?>>
                                 <i class="fa fa-dashboard fa-fw"></i>
                                 系统主页
                             </a>
@@ -86,17 +86,29 @@
                             </a>
                         </li>
                         <li>
+                            <a href=<?php echo U('index/mcert');?>>
+                                <i class="fa fa-table fa-fw"></i>
+                                证书管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href=<?php echo U('index/edulist');?>>
+                                <i class="fa fa-table fa-fw"></i>
+                                教育项目
+                            </a>
+                        </li>
+                        <li>
                             <a href="#">
                                 <i class="fa fa-wrench fa-fw"></i>
-                                新闻管理
+                                    文章管理
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="panels-wells.html">新闻列表</a>
+                                    <a href=<?php echo U('index/newslist');?>>文章列表</a>
                                 </li>
                                 <li>
-                                    <a href="buttons.html">新闻添加</a>
+                                    <a href=<?php echo U('index/editnews');?>>文章添加</a>
                                 </li>
                                 
                             </ul>
@@ -109,62 +121,15 @@
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="panels-wells.html">教师列表</a>
+                                    <a href=<?php echo U('index/teacherlist');?>>教师列表</a>
                                 </li>
                                 <li>
-                                    <a href="buttons.html">教师添加</a>
+                                    <a href=<?php echo U('index/addtea');?>>教师添加</a>
                                 </li>
                                 
                             </ul>
                         </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-wrench fa-fw"></i>
-                                教育项目管理
-                                <span class="fa arrow"></span>
-                            </a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="panels-wells.html">项目列表</a>
-                                </li>
-                                <li>
-                                    <a href="buttons.html">内容添加</a>
-                                </li>
-                                
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-wrench fa-fw"></i>
-                                人才培训管理
-                                <span class="fa arrow"></span>
-                            </a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="panels-wells.html">栏目列表</a>
-                                </li>
-                                <li>
-                                    <a href="buttons.html">内容添加</a>
-                                </li>
-                                
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-wrench fa-fw"></i>
-                                教学教务管理
-                                <span class="fa arrow"></span>
-                            </a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="panels-wells.html">栏目列表</a>
-                                </li>
-                                <li>
-                                    <a href="buttons.html">内容添加</a>
-                                </li>
-                                
-                            </ul>
-                        </li>
+                        
                         <li>
                             <a href=<?php echo U('login/logout');?>>
                                 <i class="fa fa-sign-out "></i>
@@ -211,6 +176,7 @@
     <!-- DataTables JavaScript -->
     <script src="/embahust/Public/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="/embahust/Public/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="/embahust/Public/js/getUrl.js"></script>
     <script>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({

@@ -60,7 +60,7 @@
                                     <input class="form-control" placeholder="Password" name="password" type="password" value="" required>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="verify" name="verify" type="text" value="" required style="width: 60%;float: left;"><img src=<?php echo U('login/verify');?> onclick = "this.src ='/embahust/index.php/Admin/login/verify/'+Math.random()" style="float: left;width: 40%;height: 34px;border-radius: 3px;">
+                                    <input class="form-control" placeholder="verify" name="verify" type="text" value="" required style="width: 60%;float: left;"><img src=<?php echo U('login/verify');?> onclick = "this.src ='/embahust/Admin/login/verify/'+Math.random()" style="float: left;width: 40%;height: 34px;border-radius: 3px;">
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
                                 <div style="clear: both;"></div>

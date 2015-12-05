@@ -1,0 +1,40 @@
+<extend name="Public:base"/>
+<block name="header">
+	<include file="Public:header" title="师资力量"/>
+</block>
+
+<block name="top">
+	<div class="top-bar">
+		<p>师资力量</p>
+		<ul>
+			<li>
+				<a href="{:U('/tea/1')}">院校名师</a>
+			</li>
+			<li>
+				<a href="{:U('/tea/2')}">实战专家</a>
+			</li>
+			
+		</ul>
+	</div>
+</block>
+<block name="bread">
+	<a href="">师资力量</a>
+</block>
+<block name="topImage">
+	<div class="top-pic">
+		<img src="__PUBLIC__/home/image/tea.jpg" style="width: 980px;height: 200px;" />
+	</div>
+</block>
+<block name="content">
+	<div class="main-content">
+		<h2 style="font-weight:bolder;">{$arr['name']}</h2>
+		<!-- <div style="width:200px;height:190px;margin:0 auto;">
+			<img src=<?="__APP__".substr($arr['picture'], 1)?> style="width:200px;margin:0 auto;">
+		</div> -->
+		<div>{$arr['info']}</div>
+		
+		<p class="bottom-info">华中科技大学高级研修班即将开班，期待你的加入</p>
+		<p class="bottom-info">咨询电话&nbsp;:&nbsp;027-87540112</p>
+		<p class="bottom-info" style="padding-bottom: 40px;">地址&nbsp;:&nbsp;华中科技大学国学研究院文化中心</p>
+	</div>
+</block>

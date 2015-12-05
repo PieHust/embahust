@@ -1,0 +1,65 @@
+<extend name="Public:base"/>
+<block name="header">
+	<include file="Public:header" title="教育项目"/>
+</block>
+
+<block name="top">
+	<div class="top-bar">
+		<p>教育项目</p>
+		<ul>
+			<li>
+				<a href="{:U('/edu/1')}">国学大讲堂</a>
+			</li>
+			<li>
+				<a href="{:U('/edu/2')}">精品研修班</a>
+			</li>
+			<li>
+				<a href="{:U('/edu/3')}">职业训练营</a>
+			</li>
+		</ul>
+	</div>
+</block>
+<block name="content">
+	<div class="news-wrap">
+				<div class="news-box">
+					<ul class="news" id="pics-lists">
+					<?php foreach($arr as $v):?>
+						<li>
+							<a href="{:U("/edu/$id/".$v['id'])}">● {$v.title}</a><span>{$v.date}</span>
+						</li>
+					<?php endforeach;?>
+
+		
+					</ul><!-- pics-wrapper end -->
+
+					<!--清除浮动-->
+					<div style="height: 0px; clear: both;"></div>
+
+					<p id="button-wrapper" class="btn-wrap">
+						<button>首页</button>
+						<button class="previous-page">上一页</button>
+						<button>下一页</button>
+						<button>尾页</button>&nbsp;&nbsp;
+						页码&nbsp;:&nbsp;<span>1</span>&nbsp;/&nbsp;<span>6</span>
+					</p><!-- btn-wrap end -->
+				</div><!-- teacher-pics end -->
+
+				<div class="other-info">
+					<p class="contact-info">华中科技大学高级研修班即将开班，期待你的加入</p>
+					<p class="contact-info">咨询电话&nbsp;:&nbsp;027-87540112</p>
+					<p class="contact-info" style="padding-bottom: 40px;">地址&nbsp;:&nbsp;华中科技大学国学研究院文化中心</p>
+				</div>
+
+			</div>
+</block>
+<block name="bread">
+	<a href="">教育项目</a>
+</block>
+<block name="topImage">
+	<div class="top-pic">
+		<img src="__PUBLIC__/home/image/edu.jpg" style="width: 980px;height: 200px;" />
+	</div>
+</block>
+<block name="footer">
+<script type="text/javascript" src="__PUBLIC__/home/js/changepage.js"></script>
+<include file="Public:footer"/></block>

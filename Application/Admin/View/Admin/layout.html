@@ -74,7 +74,7 @@
                     <ul class="nav" id="side-menu">
 
                         <li>
-                            <a href="index.html">
+                            <a href={:U(index)}>
                                 <i class="fa fa-dashboard fa-fw"></i>
                                 系统主页
                             </a>
@@ -86,7 +86,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href={:U('index/enrol')}>
+                            <a href={:U('index/mcert')}>
+                                <i class="fa fa-table fa-fw"></i>
+                                证书管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href={:U('index/edulist')}>
                                 <i class="fa fa-table fa-fw"></i>
                                 教育项目
                             </a>
@@ -102,7 +108,7 @@
                                     <a href={:U('index/newslist')}>文章列表</a>
                                 </li>
                                 <li>
-                                    <a href="buttons.html">文章添加</a>
+                                    <a href={:U('index/editnews')}>文章添加</a>
                                 </li>
                                 
                             </ul>

@@ -1,0 +1,54 @@
+[ 2015-12-01T22:08:21+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-12-01T22:08:48+08:00 ] ::1 /embahust/edu/1.html
+ERR: 模板不存在:./Application/Home/View/home/stu.html
+
+[ 2015-12-01T22:09:34+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-12-01T22:09:39+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-12-01T22:09:43+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-12-01T22:09:46+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-12-01T22:09:48+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-12-01T22:09:57+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-12-01T22:10:06+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-12-01T22:10:08+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-12-01T22:11:27+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-12-01T22:11:39+08:00 ] ::1 /embahust/edu/1.html
+ERR: 模板不存在:./Application/Home/View/home/stu.html
+
+[ 2015-12-01T22:20:01+08:00 ] ::1 /embahust/edu/1.html
+ERR: 模板不存在:./Application/Home/View/home/stu.html
+
+[ 2015-12-01T22:21:34+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-12-01T22:21:52+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-12-01T22:38:27+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-12-01T23:00:47+08:00 ] ::1 /embahust/edu/1.html
+ERR: 模板不存在:./Application/Home/View/home/stu.html
+
+[ 2015-12-01T23:01:05+08:00 ] ::1 /embahust/edu/1.html
+ERR: 模板不存在:./Application/Home/View/home/stu.html
+

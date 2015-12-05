@@ -18,4 +18,8 @@ return array(
     'DB_SLAVE_NO'           =>  '', // 指定从服务器序号
     'SHOW_PAGE_TRACE'		=> true,
     'URL_ROUTER_ON'         => true, 
+
+    'URL_MODEL'             => 2,
+    'MODULE_ALLOW_LIST' =>array('Home','Admin'),
+    'DEFAULT_MODULE' => 'Home',
 );

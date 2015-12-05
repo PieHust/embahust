@@ -74,7 +74,7 @@
                     <ul class="nav" id="side-menu">
 
                         <li>
-                            <a href="index.html">
+                            <a href=<?php echo U(index);?>>
                                 <i class="fa fa-dashboard fa-fw"></i>
                                 系统主页
                             </a>
@@ -86,7 +86,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href=<?php echo U('index/enrol');?>>
+                            <a href=<?php echo U('index/mcert');?>>
+                                <i class="fa fa-table fa-fw"></i>
+                                证书管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href=<?php echo U('index/edulist');?>>
                                 <i class="fa fa-table fa-fw"></i>
                                 教育项目
                             </a>
@@ -102,7 +108,7 @@
                                     <a href=<?php echo U('index/newslist');?>>文章列表</a>
                                 </li>
                                 <li>
-                                    <a href="buttons.html">文章添加</a>
+                                    <a href=<?php echo U('index/editnews');?>>文章添加</a>
                                 </li>
                                 
                             </ul>
@@ -140,7 +146,13 @@
         <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12"><h3>欢迎<?php echo session('username');?>管理员登录该管理系统</h3>
+                    <div class="col-lg-12"><style>
+	input{
+		float: left;
+	}
+
+</style>
+<h3>欢迎<?php echo session('username');?>管理员登录该管理系统</h3>
 	
 
 <div class="alert alert-success alert-dismissable">
@@ -173,9 +185,24 @@
 	<input id = 'ini'class = 'btn btn-info'type="submit" value = '初始化密码'>
 	<br/>
 	<div class = 'bg-danger ' style="margin-top:10px; " id='error'><?php echo ((isset($error) && ($error !== ""))?($error):''); ?></div>
-
-
+	<br>
 </form>
+	<div class = 'alert alert-info alert-dismissable'>
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		以下为文件上传注意事项：
+		<p style="text-indent: 2pc;">报名表文件上传，必须是后缀名为docx的文件</p>
+		<p style="text-indent: 2pc;">证书信息可以通过excel导入，文件后缀名必须为xlsx。内容为三列分别是证书编号，姓名，和班级，没有表头</p>
+	</div>
+	<form action=<?php echo U('index/enform');?> method="post" enctype="multipart/form-data">
+		<input type="file" name="file1" id="">
+		<input type="submit" class = 'btn btn-default'value="上传报名表">
+	</form>
+	<div style="clear:both; height:10px;"></div>
+	<form action=<?php echo U('index/certificate');?> method="post" enctype="multipart/form-data">
+		<input type="file" name="file2" id="">
+		<input type="submit" class = 'btn btn-default'value="上传证书excel">
+	</form>
+
 <script type="text/javascript">
 $(document).ready(function(){
 	$('#sub').click(function(){

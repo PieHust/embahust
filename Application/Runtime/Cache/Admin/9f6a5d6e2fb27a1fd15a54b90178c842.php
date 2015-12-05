@@ -74,7 +74,7 @@
                     <ul class="nav" id="side-menu">
 
                         <li>
-                            <a href="index.html">
+                            <a href=<?php echo U(index);?>>
                                 <i class="fa fa-dashboard fa-fw"></i>
                                 系统主页
                             </a>
@@ -86,7 +86,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href=<?php echo U('index/enrol');?>>
+                            <a href=<?php echo U('index/mcert');?>>
+                                <i class="fa fa-table fa-fw"></i>
+                                证书管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href=<?php echo U('index/edulist');?>>
                                 <i class="fa fa-table fa-fw"></i>
                                 教育项目
                             </a>
@@ -102,7 +108,7 @@
                                     <a href=<?php echo U('index/newslist');?>>文章列表</a>
                                 </li>
                                 <li>
-                                    <a href="buttons.html">文章添加</a>
+                                    <a href=<?php echo U('index/editnews');?>>文章添加</a>
                                 </li>
                                 
                             </ul>
@@ -147,6 +153,9 @@
     td{
         line-height: 100%;  
     }
+    td a{
+        margin-left: 10%;
+    }
  </style>
  <div class="panel panel-default" style="margin-top: 40px;">
                         <div class="panel-heading">
@@ -158,8 +167,9 @@
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
-                                            <th>姓名</th>
-                                            <th>类别</th>
+                                            <th>文章标题</th>
+                                            <th>发布时间</th>
+                                            <th>新闻类别</th>
                                             <th>操作方式</th>
                                             
                                         </tr>
@@ -168,12 +178,17 @@
 
                                     <?php foreach ($arr as $k => $v):?>
                                         <tr class=>
-                                            <td><?php echo ($v["name"]); ?></td>
-                                            <td><?php if($v['class_id'] == 1)echo "院校名师";else echo "专家学者";?></td>
-                                            <td><a style="margin-left:30%;" class='glyphicon glyphicon-edit' title="编辑" href="/embahust/index.php/Admin/index/showtea?id=<?php echo ($v["id"]); ?>"></a>
-                                                <a style="margin-left: 30%;" href="/embahust/index.php/Admin/index/deltea?id=<?php echo ($v["id"]); ?>" class='fa fa-trash-o' title='删除'>
-                                            </a>
+                                            <td><?php echo ($v["title"]); ?></td>
+                                            <td><?php echo ($v["date"]); ?></td>
+                                            <td><?php echo ($v["class_name"]); ?></td>
+                                            <td>
+                                                <a href=<?php echo U('index/shownews',array('id' => $v['id']));?> 
+
+                                                class='glyphicon glyphicon-edit' title="编辑" ></a>
+                                                <a href=<?php echo U('index/delnews',array('id' => $v['id']));?> class='fa fa-trash-o' title='删除'></a>
+                                                <a href=<?php echo U('index/chstate',array('id' => $v['id']));?>><?php if($v['state']==0):?><span style='color:red;'>放在首页</span><?php else:?>取消设置<?php endif;?></a>
                                             </td>
+                                            
                                             
                                         </tr>
                                     <?php endforeach;?>  

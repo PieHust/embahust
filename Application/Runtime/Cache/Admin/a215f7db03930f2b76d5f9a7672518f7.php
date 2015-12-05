@@ -74,7 +74,7 @@
                     <ul class="nav" id="side-menu">
 
                         <li>
-                            <a href="index.html">
+                            <a href=<?php echo U(index);?>>
                                 <i class="fa fa-dashboard fa-fw"></i>
                                 系统主页
                             </a>
@@ -86,7 +86,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href=<?php echo U('index/enrol');?>>
+                            <a href=<?php echo U('index/mcert');?>>
+                                <i class="fa fa-table fa-fw"></i>
+                                证书管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href=<?php echo U('index/edulist');?>>
                                 <i class="fa fa-table fa-fw"></i>
                                 教育项目
                             </a>
@@ -102,7 +108,7 @@
                                     <a href=<?php echo U('index/newslist');?>>文章列表</a>
                                 </li>
                                 <li>
-                                    <a href="buttons.html">文章添加</a>
+                                    <a href=<?php echo U('index/editnews');?>>文章添加</a>
                                 </li>
                                 
                             </ul>
@@ -140,7 +146,13 @@
         <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12"><div class="row">
+                    <div class="col-lg-12"><style type="text/css">
+    form{
+        font-size: 16px;
+        font-weight: bolder;
+    }
+</style>
+<div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">教师添加</h1>
     </div>
@@ -159,11 +171,11 @@
                         职称
                         <select class='form-control' name ='state'>
                             <option value="1">院校名师</option>
-                            <option value="2">专家学者</option>
+                            <option value="2">实战专家</option>
                         </select>
 
                         <br>
-                        上传老师照片
+                        上传老师展示照片
                         <input type="file" name = 'picture'>
                            <br>
                         <div class="col-md-12">

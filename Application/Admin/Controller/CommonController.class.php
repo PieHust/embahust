@@ -9,7 +9,5 @@ class CommonController extends Controller{
 		}
 	}
 
-	protected function getImgurl($content,$order='ALL'){
 	
-	}
 }

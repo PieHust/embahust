@@ -1,0 +1,86 @@
+/* 去掉点击按钮或链接后出现虚线边框 */
+a, button{
+	outline: none;
+}
+::-moz-focus-inner{
+	border: none;
+}
+
+
+/* teacher-pics */
+.news-box{
+	background-color: #f6f6f6;
+	color: #333;
+	border: 1px solid #e9d1d1;
+}
+.news-wrap .news-box ul{
+	list-style-type: disc;
+	list-style-position: inside;
+	margin-left: 20px;
+	margin-top: 50px;
+	min-height: 550px;
+}
+.news-wrap .news-box #pics-lists li{
+	width: 780px;
+	padding-left: 20px;
+	font-size: 15px;
+	position: relative;
+	height: 30px;
+	vertical-align: middle;
+	padding-bottom: 4px;
+}
+.news-wrap .news-box ul li a{
+	display: block;
+	width: 650px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	line-height: 30px;
+}
+.news-wrap .news-box ul li a:link, .news-wrap .news-box ul li a:visited{
+	color: #000;
+}
+.news-wrap .news-box ul li a:hover{
+	text-decoration: underline;
+	color: red;
+}
+.news-wrap .news-box ul li span{
+	float: right;
+	color: gray;
+	display: block;
+	position: absolute;
+	right: 0px;
+	top: 7px;
+	font-size: 15px;
+}
+
+
+/* other-info */
+.other-info{
+	margin-top: 35px;
+	height: 90px;
+}
+.contact-info{
+	text-align: center;
+	font-size: 16px;
+	line-height: 26.88px;
+	color: #d31515;
+}
+
+
+/* btn-wrap */
+.btn-wrap{
+	margin: 30px 0 20px 0;
+	text-align: center;
+}
+.btn-wrap button{
+	background-color: #f6f6f6;
+	border: 1px solid #d1d1d1;
+	padding: 1px 6.5px;
+	margin: 0 2px;
+	font-size: 15px;
+}
+.btn-wrap button.previous-page{
+	border: 1px solid #f6f6f6;
+	cursor: text;
+}

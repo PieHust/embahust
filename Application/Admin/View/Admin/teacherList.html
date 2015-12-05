@@ -27,7 +27,7 @@
                                     <?php foreach ($arr as $k => $v):?>
                                         <tr class=>
                                             <td>{$v.name}</td>
-                                            <td><?php if($v['class_id'] == 1)echo "院校名师";else echo "专家学者";?></td>
+                                            <td><?php if($v['class_id'] == 1)echo "院校名师";else echo "实战专家";?></td>
                                             <td><a style="margin-left:30%;" class='glyphicon glyphicon-edit' title="编辑" href="__MODULE__/index/showtea?id={$v.id}"></a>
                                                 <a style="margin-left: 30%;" href="__MODULE__/index/deltea?id={$v.id}" class='fa fa-trash-o' title='删除'>
                                             </a>

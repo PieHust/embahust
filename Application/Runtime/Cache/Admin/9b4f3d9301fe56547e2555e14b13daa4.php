@@ -74,7 +74,7 @@
                     <ul class="nav" id="side-menu">
 
                         <li>
-                            <a href="index.html">
+                            <a href=<?php echo U(index);?>>
                                 <i class="fa fa-dashboard fa-fw"></i>
                                 系统主页
                             </a>
@@ -86,7 +86,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href=<?php echo U('index/enrol');?>>
+                            <a href=<?php echo U('index/mcert');?>>
+                                <i class="fa fa-table fa-fw"></i>
+                                证书管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href=<?php echo U('index/edulist');?>>
                                 <i class="fa fa-table fa-fw"></i>
                                 教育项目
                             </a>
@@ -102,7 +108,7 @@
                                     <a href=<?php echo U('index/newslist');?>>文章列表</a>
                                 </li>
                                 <li>
-                                    <a href="buttons.html">文章添加</a>
+                                    <a href=<?php echo U('index/editnews');?>>文章添加</a>
                                 </li>
                                 
                             </ul>
@@ -172,8 +178,8 @@
                                             <td><?php echo ($v["name"]); ?></td>
                                             <td><?php echo ($v["title"]); ?></td>
                                             <td><?php echo ($v["tell"]); ?></td>
-                                            <td><a style="margin-left:30%;" class='fa fa-file-text' title="查看" href="/embahust/index.php/Admin/index/showenrol?id=<?php echo ($v["id"]); ?>"></a>
-                                                <a style="margin-left: 30%;" href="/embahust/index.php/Admin/index/delenrol?id=<?php echo ($v["id"]); ?>" class='fa fa-trash-o' title='删除'>
+                                            <td><a style="margin-left:30%;" class='fa fa-file-text' title="查看" href="/embahust/Admin/index/showenrol?id=<?php echo ($v["id"]); ?>"></a>
+                                                <a style="margin-left: 30%;" href="/embahust/Admin/index/delenrol?id=<?php echo ($v["id"]); ?>" class='fa fa-trash-o' title='删除'>
                                             </a>
                                             </td>
                                             

@@ -1,0 +1,76 @@
+[ 2015-11-30T14:22:57+08:00 ] ::1 /embahust/cominfo
+ERR: 无法加载控制器:Cominfo
+
+[ 2015-11-30T15:04:42+08:00 ] ::1 /embahust/tea/heh
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T15:09:18+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T15:09:22+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T15:09:26+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T15:10:32+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T15:10:35+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T15:10:38+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T15:17:24+08:00 ] ::1 /embahust/stu/1.html
+ERR: 模板不存在:./Application/Home/View/home/stu.html
+
+[ 2015-11-30T15:17:59+08:00 ] ::1 /embahust/edu/1.html
+ERR: 模板不存在:./Application/Home/View/home/stu.html
+
+[ 2015-11-30T15:23:30+08:00 ] ::1 /embahust/info.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%d )' at line 1
+ [ SQL语句 ] : UPDATE `edu_pro` SET `id`='4',`title`='中心介绍',`content`='<p style=\"padding: 0px; margin-top: 0px; margin-bottom: 0px; color: rgb(76, 76, 76); font-family: Simsun; font-size: 12px; line-height: 24px; white-space: normal; text-indent: 2em;\"><span style=\"font-size: 14px; line-height: 2;\">武汉华科聚智自2004年起，即与华中科技大学管理学院、远程与继续教育学院合作，针对华中地区的企业家及各类企业的中高层管理人员，开展企业工商管理方面的商学教育工作。十余年来，华科聚智坚持“立足中部、面向全国、放眼全球”办学方针，以“推进跨国公司本土化、国有企业国际化、民营企业现代化”为己任，至今已开设总裁高级研修班、营销/人力资源/财务/生产总监研修班等共计50余期，并为400余家企业提供了各类综合内训服务，累计受训学员16000余名，对广大华中地区企业家及企业中高层管理人员的经营管理能力与综合素质的提升、华中地区的经济发展，起到了巨大的推动作用。</span></p><p style=\"padding: 0px; margin-top: 0px; margin-bottom: 0px; color: rgb(76, 76, 76); font-family: Simsun; font-size: 12px; line-height: 24px; white-space: normal; text-indent: 2em;\"><br/></p><p style=\"padding: 0px; margin-top: 0px; margin-bottom: 0px; color: rgb(76, 76, 76); font-family: Simsun; font-size: 12px; line-height: 24px; white-space: normal; text-indent: 2em;\"><span style=\"font-size: 14px; line-height: 2;\">华科聚智以公开课、标准化内训、商务考察、学术论坛等多种形式解决企业各类人才培养及管理者成长需求，所服务企业客户受众层次、数量均为华中首位；并以本身雄厚学习资源为企业提供系统解决方案，以西方管理学最新的研究成果与中国本土最新的管理实践相结合，包括种类齐全，分工详细的各类咨询和培训体系。</span></p><p style=\"padding: 0px; margin-top: 0px; margin-bottom: 0px; color: rgb(76, 76, 76); font-family: Simsun; font-size: 12px; line-height: 24px; white-space: normal; text-indent: 2em;\"><br/></p><p style=\"padding: 0px; margin-top: 0px; margin-bottom: 0px; color: rgb(76, 76, 76); font-family: Simsun; font-size: 12px; line-height: 24px; white-space: normal; text-indent: 2em;\"><br/></p><p style=\"padding: 0px; margin-top: 0px; margin-bottom: 0px; color: rgb(76, 76, 76); font-family: Simsun; font-size: 12px; line-height: 24px; white-space: normal; text-indent: 2em;\"><span style=\"font-size: 14px; line-height: 2;\">“未来唯一持久的竞争优势，是有能力比你的竞争对手学习的更快”，我们立志于建立华中咨询培训行业标杆，以自己专注的理念开创一片学习与交流的净土，为中国社会的发展贡献力量。</span></p><p style=\"padding: 0px; margin-top: 0px; margin-bottom: 0px; color: rgb(76, 76, 76); font-family: Simsun; font-size: 12px; line-height: 24px; white-space: normal; text-indent: 2em;\"><span style=\"font-size: 14px; line-height: 2;\">&nbsp;</span></p><p style=\"padding: 0px; margin-top: 0px; margin-bottom: 0px; color: rgb(76, 76, 76); font-family: Simsun; font-size: 12px; line-height: 24px; white-space: normal; text-indent: 2em;\"><span style=\"font-size: 14px; line-height: 2;\">我们的优势：</span></p><p style=\"padding: 0px; margin-top: 0px; margin-bottom: 0px; color: rgb(76, 76, 76); font-family: Simsun; font-size: 12px; line-height: 24px; white-space: normal; text-indent: 2em;\"><span style=\"font-size: 14px; line-height: 2;\">【前瞻的国际化理念】将国际管理前沿的理念引入培训，并与中国企业的管理实践相结合。</span></p><p style=\"padding: 0px; margin-top: 0px; margin-bottom: 0px; color: rgb(76, 76, 76); font-family: Simsun; font-size: 12px; line-height: 24px; white-space: normal; text-indent: 2em;\"><span style=\"font-size: 14px; line-height: 2;\">【专业的服务方式】通过专业顾问诊断客户的需求，为客户设计针对性一站式培训解决方案，并提供战略性、连贯性的长期系统培训服务。</span></p><p style=\"padding: 0px; margin-top: 0px; margin-bottom: 0px; color: rgb(76, 76, 76); font-family: Simsun; font-size: 12px; line-height: 24px; white-space: normal; text-indent: 2em;\"><span style=\"font-size: 14px; line-height: 2;\">【可靠的技术支持】专业的讲师和技术支持队伍保证可靠的培训实施，为客户提供评估和跟进方法，达到阶段性成果以及培训的持续性。</span></p><p style=\"padding: 0px; margin-top: 0px; margin-bottom: 0px; color: rgb(76, 76, 76); font-family: Simsun; font-size: 12px; line-height: 24px; white-space: normal; text-indent: 2em;\"><span style=\"font-size: 14px; line-height: 2;\">【强大的讲师团队】依托名企、名校优势和丰富资源，讲师均来自世界五百强或国内标杆企业，并有连续五年以上的中高层管理经验及培训经验。</span></p><p style=\"padding: 0px; margin-top: 0px; margin-bottom: 0px; color: rgb(76, 76, 76); font-family: Simsun; font-size: 12px; line-height: 24px; white-space: normal; text-indent: 2em;\"><span style=\"font-size: 14px; line-height: 2;\">【轻松的培训方式】将知识与体验模拟、思维引导、角色扮演、案例分析、情景游戏等结合。</span></p><p style=\"padding: 0px; margin-top: 0px; margin-bottom: 0px; color: rgb(76, 76, 76); font-family: Simsun; font-size: 12px; line-height: 24px; white-space: normal; text-indent: 2em;\"><span style=\"font-size: 14px; line-height: 2;\">【持续的深入学习支持】开设各类专业课程班，助力企业有选择的对专业进行深入学习。</span></p><p style=\"padding: 0px; margin-top: 0px; margin-bottom: 0px; color: rgb(76, 76, 76); font-family: Simsun; font-size: 12px; line-height: 24px; white-space: normal; text-indent: 2em;\"><span style=\"font-size: 14px; line-height: 2;\">【优秀企业经验的分享】引入宝洁、麦当劳、GE、IBM、惠普、华为等优秀企业职业培训师。</span></p><p style=\"padding: 0px; margin-top: 0px; margin-bottom: 0px; color: rgb(76, 76, 76); font-family: Simsun; font-size: 12px; line-height: 24px; white-space: normal; text-indent: 2em;\">【打造企业培训大学】整合国内企业大学、知名商学院资源，为企业打造内部培训体系，进行全体系的人才培养。</p><p><br/></p>',`page_view`='1',`date`='2015-11-30' WHERE ( id = %d )
+
+[ 2015-11-30T15:25:42+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T15:25:46+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T15:25:49+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T15:25:51+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T15:25:54+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T15:29:18+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T15:29:18+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T15:30:18+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T15:30:47+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T15:31:39+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T15:33:24+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T19:57:19+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T20:03:05+08:00 ] ::1 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-11-30T20:03:11+08:00 ] ::1 /embahust/edu/1.html
+ERR: 模板不存在:./Application/Home/View/home/stu.html
+

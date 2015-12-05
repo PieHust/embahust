@@ -1,0 +1,185 @@
+<include file="Public:header" title="首页"/>
+<div id="focus_Box">
+	<span class="prev">&nbsp;</span>
+	<span class="next">&nbsp;</span>
+	<ul id = "Box_ul">
+		<?php foreach($hot as $v):?>
+		<li class = "Box_li">
+			<a href={:U('/'.$v['name']."/".$v['class']."/".$v['id'])}>
+				<img  src=<?="__APP__".$v['picture']?> title={$v.title} />
+			</a>
+		</li>
+	<?php endforeach;?>
+		
+	</ul>
+</div>
+
+<div id = "content_Div">
+
+	<div id = "announce_Div">
+		<div class = "right-top_div">
+			<span>
+				<bold>通知公告</bold>
+			</span>
+			<a href="{:U('/news/2')}">更多...</a>
+		</div>
+
+		<div class = "right-bottom_div">
+			<ul>
+				<?php foreach($arr2 as $k=>$v):?>
+				<li>
+					<span class = "rightSpan">【最新】</span>
+					<a href="{:U('/news/2/'.$v['id'])}">{$v.title}</a>
+					<span class = "liDate">{$v.date}</span>
+					</li>
+				<?php endforeach;?>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class = "left_Div" id = "left_Div_first">
+		<div class = "left-top_div">
+			<span class = "head">
+				<bold>新闻咨询</bold>
+			</span>
+			<a href="{:U('/news/1')}" class = "topA">更多...</a>
+		</div>
+
+		<div class = "left-bottom_div">
+
+			<div class="case1" >
+				<div id="slider1" class="case_box1">
+					<ul>
+					<?php foreach($arr1 as $k=>$v):?>
+						<?php if(!empty($v['picture'])):?>
+						<li>
+							<a href={:U('/news/1'.$v['id'])}>
+								<img src=<?="__APP__".substr($v['picture'], 1)?> title={$v.title}></a>
+						</li>
+					<?php endif;?>
+					<?php endforeach;?>
+						
+					</ul>
+				</div>
+			</div>
+
+			<ul class = "aList">
+				<?php foreach($arr1 as $k=>$v):?>
+				<li>
+					<a href={:U('/news/1'.$v['id'])}>{$v.title}</a>
+					<span class = "liDate">{$v.date}</span>
+					</li>
+				<?php endforeach;?>
+			</ul>
+
+		</div>
+	</div>
+
+	<div id = "img_Div">
+		<div id = "img_top_div">
+			<span id = "top_teacher_span">院校名师</span>
+			<span id = "top_expert_span">实战专家</span>
+		</div>
+
+		<div class = "img_bottom_div" id = "img_teacher">
+		<?php foreach($tea1 as $v):?>
+			<div style="margin-bottom:20px;">
+			<a href="{:U('/tea/1/'.$v['id'])}"><img src=<?="__APP__".substr($v['picture'], 1)?> title={$v.name}  style="width:110px;height:142px;">
+				<br></a>
+			</div>
+		<?php endforeach;?>
+			
+		</div>
+
+		<div class = "img_bottom_div" id = "img_expert">
+			<?php foreach($tea2 as $v):?>
+			<div>
+			<a href="{:U('/tea/2/'.$v['id'])}"><img src=<?="__APP__".substr($v['picture'], 1)?> title={$v.name}  style="width:110px;height:142px;">
+				<br></a>
+				
+				
+			</div>
+		<?php endforeach;?>
+		</div>
+
+	</div>
+
+	<div class = "left_Div">
+		<div class = "left-top_div">
+			<span class = "head">
+				<bold>招生信息</bold>
+			</span>
+			<a href="{:U('/news/3')}" class = "topA">更多...</a>
+		</div>
+
+		<div class = "left-bottom_div">
+
+			<div class="case" >
+				<div id="slider" class="case_box">
+					<ul>
+						
+						<?php foreach($arr3 as $k=>$v):?>
+						<?php if(!empty($v['picture'])):?>
+						<li>
+							<a href={:U('/news/3'.$v['id'])}>
+								<img src=<?="__APP__".substr($v['picture'], 1)?> title={$v.title}></a>
+						</li>
+					<?php endif;?>
+					<?php endforeach;?>
+						
+					</ul>
+				</div>
+			</div>
+
+			<ul class = "aList">
+				
+				<?php foreach($arr3 as $k=>$v):?>
+				<li>
+					<a href={:U('/news/3'.$v['id'])}>{$v.title}</a>
+					<span class = "liDate">{$v.date}</span>
+					</li>
+				<?php endforeach;?>
+							</ul>
+
+		</div>
+	</div>
+
+	<div class = "left_Div">
+		<div class = "left-top_div">
+			<span class = "head">
+				<bold>人才培训</bold>
+			</span>
+			<a href="{:U('/tra/1')}" class = "topA">更多...</a>
+		</div>
+
+		<div class = "left-bottom_div">
+			<div class="case2" >
+				<div id="slider2" class="case_box2">
+					<ul>
+						<?php foreach($arr4 as $k=>$v):?>
+						<?php if(!empty($v['picture'])):?>
+						<li>
+							<a href={:U('/tra/1'.$v['id'])}>
+								<img src=<?="__APP__".substr($v['picture'], 1)?> title={$v.title}></a>
+						</li>
+					<?php endif;?>
+					<?php endforeach;?>
+					</ul>
+				</div>
+			</div>
+			<ul class = "aList">
+				<?php foreach($arr4 as $k=>$v):?>
+				<li>
+					<a href={:U('/tra/1'.$v['id'])}>{$v.title}</a>
+					<span class = "liDate">{$v.date}</span>
+					</li>
+				<?php endforeach;?>
+							</ul>
+
+		</div>
+	</div>
+
+</div>
+<script type="text/javascript" src ="__PUBLIC__/home/js/ZoomPic.js"></script>
+<include file="Public:footer"/>

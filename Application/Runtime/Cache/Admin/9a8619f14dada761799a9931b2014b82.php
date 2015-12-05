@@ -74,7 +74,7 @@
                     <ul class="nav" id="side-menu">
 
                         <li>
-                            <a href="index.html">
+                            <a href=<?php echo U(index);?>>
                                 <i class="fa fa-dashboard fa-fw"></i>
                                 系统主页
                             </a>
@@ -86,7 +86,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href=<?php echo U('index/enrol');?>>
+                            <a href=<?php echo U('index/mcert');?>>
+                                <i class="fa fa-table fa-fw"></i>
+                                证书管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href=<?php echo U('index/edulist');?>>
                                 <i class="fa fa-table fa-fw"></i>
                                 教育项目
                             </a>
@@ -102,7 +108,7 @@
                                     <a href=<?php echo U('index/newslist');?>>文章列表</a>
                                 </li>
                                 <li>
-                                    <a href="buttons.html">文章添加</a>
+                                    <a href=<?php echo U('index/editnews');?>>文章添加</a>
                                 </li>
                                 
                             </ul>
@@ -140,40 +146,50 @@
         <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12"> <br/> 
- <br/> 
- <br/> 
- <h3 align="center">教师信息修改</h3>
- <form action="/embahust/index.php/Admin/index/showtea?id=<?php echo ($arr["id"]); ?>"method = 'post'>
-     <div class="row">
-         <div class = 'col-md-2'></div>
-         <div class = 'col-md-3'>
-             <input type="text" name ='name' value=<?php echo ($arr["name"]); ?> class="form-control"> 
-             <br></div>
-        <div class='col-md-3'>
-            <select class='form-control' name ='state'>
-                <option value="1">院校名师</option>
-                <option value="2">专家学者</option>
-            </select>
-        </div>
-     </div>
-     <div class="row">
-         <div class = 'col-md-2'></div>
-         <div class = 'col-md-8'>
+                    <div class="col-lg-12"><style type="text/css">
+    form{
+        font-size: 16px;
+        font-weight: bolder;
+    }
+</style>
+ <div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">资料编辑</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">资料编辑</div>
+            <div class="panel-body">
+                <div class="row">
+                    <form action=<?php echo U('index/showtea',array('id' => $arr['id']));?> method="post" enctype="multipart/form-data">
+                        姓名
+                        <input type="text" name ='name' class="form-control" placeholder= '请输入老师姓名' value=<?php echo ($arr["name"]); ?> >
+                        职称
+                        <select class='form-control' name ='state'>
+                            <option value="1">院校名师</option>
+                            <option value="2">专家学者</option>
+                        </select>
 
-             <script id="uecontainer" name="info" type="text/plain" style=''><?php echo ($arr["info"]); ?></script>
-         </div>
+                        <br>
+                        上传老师展示照片
+                        <input type="file" name = 'picture'>
+                           <br>
+                        <div class="col-md-12">
+                            <script id="uecontainer" name="info" type="text/plain" ><?php echo ($arr["info"]); ?></script>
+                        </div>
 
-     </div>
-     <br> 
-     <div class="row">
-         <div class = 'col-md-2'></div>
-         <div class = 'col-md-8'>
-             <input type="submit" class="btn btn-info" value="保存"></div>
+                        <input type="submit" class="btn btn-info" style="float: right;margin-right: 3%;" value="添加"></form>
 
-     </div>
-
- </form>
+                </div>
+                <!-- /.row (nested) --> </div>
+            <!-- /.panel-body --> </div>
+        <!-- /.panel --> </div>
+    <!-- /.col-lg-12 -->
+</div>
 
  <!-- 配置文件 --> 
  <script type="text/javascript" src="/embahust/Public/editor/ueditor.config.js"></script>

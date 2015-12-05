@@ -1,0 +1,16 @@
+[ 2015-11-24T23:19:59+08:00 ] ::1 /embahust/Admin/index/editnews.html
+ERR: 1048:Column 'content' cannot be null
+ [ SQL语句 ] : INSERT INTO `news` (`title`,`content`,`date`,`class`) VALUES ('',NULL,'','0')
+
+[ 2015-11-24T23:20:09+08:00 ] ::1 /embahust/Admin/index/addtea.html
+ERR: 1048:Column 'info' cannot be null
+ [ SQL语句 ] : INSERT INTO `teacher` (`name`,`info`,`class_id`) VALUES ('',NULL,'1')
+
+[ 2015-11-24T23:21:13+08:00 ] ::1 /embahust/Admin/index/addtea.html
+ERR: 1048:Column 'info' cannot be null
+ [ SQL语句 ] : INSERT INTO `teacher` (`name`,`info`,`class_id`) VALUES ('',NULL,'1')
+
+[ 2015-11-24T23:26:28+08:00 ] ::1 /embahust/Admin/index/editnews.html
+ERR: 1048:Column 'content' cannot be null
+ [ SQL语句 ] : INSERT INTO `news` (`title`,`content`,`date`,`class`) VALUES ('',NULL,'','0')
+

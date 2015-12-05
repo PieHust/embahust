@@ -5,6 +5,9 @@
     td{
         line-height: 100%;  
     }
+    td a{
+        margin-left: 10%;
+    }
  </style>
  <div class="panel panel-default" style="margin-top: 40px;">
                         <div class="panel-heading">
@@ -16,8 +19,9 @@
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
-                                            <th>姓名</th>
-                                            <th>类别</th>
+                                            <th>文章标题</th>
+                                            <th>发布时间</th>
+                                            <th>新闻类别</th>
                                             <th>操作方式</th>
                                             
                                         </tr>
@@ -26,12 +30,17 @@
 
                                     <?php foreach ($arr as $k => $v):?>
                                         <tr class=>
-                                            <td>{$v.name}</td>
-                                            <td><?php if($v['class_id'] == 1)echo "院校名师";else echo "专家学者";?></td>
-                                            <td><a style="margin-left:30%;" class='glyphicon glyphicon-edit' title="编辑" href="__MODULE__/index/showtea?id={$v.id}"></a>
-                                                <a style="margin-left: 30%;" href="__MODULE__/index/deltea?id={$v.id}" class='fa fa-trash-o' title='删除'>
-                                            </a>
+                                            <td>{$v.title}</td>
+                                            <td>{$v.date}</td>
+                                            <td>{$v.class_name}</td>
+                                            <td>
+                                                <a href={:U('index/shownews',array('id' => $v['id']))} 
+
+                                                class='glyphicon glyphicon-edit' title="编辑" ></a>
+                                                <a href={:U('index/delnews',array('id' => $v['id']))} class='fa fa-trash-o' title='删除'></a>
+                                                <a href={:U('index/chstate',array('id' => $v['id']))}><?php if($v['state']==0):?><span style='color:red;'>放在首页</span><?php else:?>取消设置<?php endif;?></a>
                                             </td>
+                                            
                                             
                                         </tr>
                                     <?php endforeach;?>  

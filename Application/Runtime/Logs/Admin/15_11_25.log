@@ -1,0 +1,32 @@
+[ 2015-11-25T09:58:31+08:00 ] ::1 /embahust/Admin/index/editnews.html
+ERR: 1048:Column 'content' cannot be null
+ [ SQL语句 ] : INSERT INTO `news` (`title`,`content`,`date`,`class`) VALUES ('',NULL,'2015-11-04','0')
+
+[ 2015-11-25T10:02:17+08:00 ] ::1 /embahust/Admin/index/editnews.html
+ERR: 1048:Column 'content' cannot be null
+ [ SQL语句 ] : INSERT INTO `news` (`title`,`content`,`date`,`class`) VALUES ('',NULL,'','0')
+
+[ 2015-11-25T10:39:26+08:00 ] ::1 /embahust/Admin/index/newslist.html
+ERR: 1054:Unknown column 'news_class.id' in 'on clause'
+ [ SQL语句 ] : SELECT * FROM `news` INNER JOIN news_class on news.class =news_class.id  
+
+[ 2015-11-25T10:39:30+08:00 ] ::1 /embahust/Admin/index/newslist.html
+ERR: 1054:Unknown column 'news_class.id' in 'on clause'
+ [ SQL语句 ] : SELECT * FROM `news` INNER JOIN news_class on news.class =news_class.id  
+
+[ 2015-11-25T11:33:28+08:00 ] ::1 /embahust/Admin/index/editedu/id/index/edulist
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'index ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `edu_pro` WHERE ( id = index ) LIMIT 1  
+
+[ 2015-11-25T11:34:16+08:00 ] ::1 /embahust/Admin/index/editedu/id/index.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'index ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `edu_pro` WHERE ( id = index ) LIMIT 1  
+
+[ 2015-11-25T11:34:43+08:00 ] ::1 /embahust/Admin/index/editedu/id/index.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'index ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `edu_pro` WHERE ( id = index ) LIMIT 1  
+
+[ 2015-11-25T16:23:52+08:00 ] ::1 /embahust/Admin/index/certificate.html
+ERR: 1062:Duplicate entry '12233' for key 'number'
+ [ SQL语句 ] : INSERT INTO `certificate` (`number`,`class`,`name`) VALUES ('12233','bbbbb','fadsfasf')
+

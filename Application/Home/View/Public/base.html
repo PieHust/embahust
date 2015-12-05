@@ -1,0 +1,76 @@
+<block name="header"><include file="Public:header"/></block>
+	<div class="main-body">
+		<block name="topImage">
+			<div class="top-pic">
+				<img src="__PUBLIC__/home/image/info.jpg" style="width: 980px;height: 200px;" />	
+			</div>
+		</block>
+		<div class="left-side-bar">
+			<block name="top"></block>
+			<block name="middle">
+				<div class="middle-bar">
+				<p>招生信息</p>
+				<ul>
+				<?php foreach($entArr as $k=>$v):?>
+					<li>
+						<a href={:U('/news/3/'.$v['id'])}><span style="font-size:14px;color:red;font-weight:800;">[HOT]</span>{$v.title}</a>
+					</li>
+				<?php endforeach;?>
+				</ul>
+			</div>
+			</block>
+			<block name="rank">
+				<div class="rank-bar">
+					<p>点击排行榜</p>
+					<ul>
+						<?php foreach($rankArr as $k=>$v):?>
+						<li>
+							<span style="font-size:14px;">{++$i}</span>
+					<a href={:U("/".$v['name']."/".$v['class']."/".$v['id'])} >{$v.title}</a>
+						</li>
+						<?php endforeach;?>
+
+					</ul>
+				</div>
+			</block>
+		</div>
+
+		<div class="content-wrap">
+			<p class="location">
+				<span>您现在的位置&nbsp;:</span>
+				<a href={:U('/index')}>首页</a>
+				&nbsp;&nbsp;>&nbsp;&nbsp;
+				<block name="bread">
+					<a href="">中心介绍</a>
+				</block>
+
+			</p>
+			<!-- location end -->	
+			<div class="sign-up">
+				<span>招生火热进行中...</span>
+				<a href="__ROOT__/Uploads/entryform.docx">报名表下载</a>
+			</div>
+			<!-- sign-up end -->
+			<block name="content">	
+			<div class="main-content">
+				
+					<h2>{$arr.title}</h2>
+					<p class="date">
+						{$arr.date} 发布,&nbsp;
+						<span>{$arr.page_view}浏览</span>
+					</p>
+					{$arr.content}
+				
+
+				<p class="bottom-info">华中科技大学高级研修班即将开班，期待你的加入</p>
+				<p class="bottom-info">咨询电话&nbsp;:&nbsp;027-87540112</p>
+				<p class="bottom-info" style="padding-bottom: 40px;">地址&nbsp;:&nbsp;华中科技大学国学研究院文化中心</p>
+			</div>
+			</block>
+			<!-- main-content end -->	
+		</div>
+		<!-- main-content end -->	
+		<!--清除浮动-->	
+		<div style="height: 0px; clear: both;"></div>
+	</div>
+	<block name="footer"><include file="Public:footer"/></block>

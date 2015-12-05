@@ -1,0 +1,41 @@
+	<div id="footer">
+		<div class="footer-wrap">
+			<div class="footer-wrap-content">
+				<p>
+					友情链接&nbsp;:
+					<a href="http://www.hust.edu.cn" target="blank">华中科技大学</a>
+					&nbsp;xxxxxx公司 &nbsp;版权所有
+				</p>
+				<p>地址&nbsp;: 武汉市洪山区珞瑜路1037号</p>
+			</div>
+			<img src="__PUBLIC__/home/image/erweima.jpg" style="width: 68px; height: 68px;" />
+		</div>
+		<!-- footer-wrap end -->
+	</div>
+	<!-- footer end -->
+	
+	
+	<script type="text/javascript" src="__PUBLIC__/home/js/common.js"></script>
+	
+	<script>
+	$('doucument').ready(function(){
+		$("#{$li} dt a").addClass('special');
+		$(".top-bar ul li").eq({$id-1}).children('a').css({
+			'font-weight':800,
+			'font-size':"16px",
+			"color":'#d20000',
+		});
+		$('.rank-bar span:lt(3)').css({
+			'background': '#d31515',
+			
+		});
+		$('.rank-bar a').eq(0).css({
+			'color': '#d83333',
+			'font-weight':"bolder"
+		});
+		
+	});
+		
+	</script>
+</body>
+</html>

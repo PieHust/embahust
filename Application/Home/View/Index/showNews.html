@@ -1,0 +1,42 @@
+<extend name="Public:base"/>
+<block name="header">
+	<include file="Public:header" title="新闻资讯"/>
+</block>
+<block name="middle"></block>
+<block name="top">
+	<div class="top-bar">
+		<p>新闻资讯</p>
+		<ul>
+			<li>
+				<a href="{:U('/news/1')}">新闻资讯</a>
+			</li>
+			<li>
+				<a href="{:U('/news/2')}">通知公告</a>
+			</li>
+			<li>
+				<a href="{:U('/news/3')}">招生信息</a>
+			</li>
+		</ul>
+	</div>
+</block>
+<block name="bread">
+	<a href="">新闻资讯</a>
+</block>
+<block name="topImage">
+	<div class="top-pic">
+		<img src="__PUBLIC__/home/image/news.jpg" style="width: 980px;height: 200px;" />
+	</div>
+</block>
+<block name="content">
+	<div class="main-content">
+		<h2>{$arr['title']}</h2>
+		<p class="date">
+			{$arr['date']} 发布,&nbsp;
+			<span>{$arr["page_view"]}浏览</span>
+		</p>
+		{$arr['content']}
+		<p class="bottom-info">华中科技大学高级研修班即将开班，期待你的加入</p>
+		<p class="bottom-info">咨询电话&nbsp;:&nbsp;027-87540112</p>
+		<p class="bottom-info" style="padding-bottom: 40px;">地址&nbsp;:&nbsp;华中科技大学国学研究院文化中心</p>
+	</div>
+</block>

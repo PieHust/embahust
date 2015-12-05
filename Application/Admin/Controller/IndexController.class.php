@@ -57,7 +57,7 @@ class IndexController extends CommonController {
         if($enrol -> delete($id)){
             $this-> redirect('index/enrol');    
         }else{
-            $this-> error('删除失败，请稍后重试','index/enrol',3);
+            $this-> error('删除失败，请稍后重试');
         }
         
     }
@@ -84,15 +84,18 @@ class IndexController extends CommonController {
             $data['name'] = I('post.name');
             $data['info'] = $_POST['info'];
             $data['class_id'] = intval(I('post.state'));
-           
-            
-            print_r($data); print_r($content);
-            exit;
+            if($_FILES['picture']['error'] == 0){
+                $ext = array_pop(explode('.',$_FILES['picture']['name']));       
+                $filename = date('YmdHis').rand(1000,9999).'.'.$ext;
+                move_uploaded_file($_FILES['picture']['tmp_name'],"./Public/image/".$filename);
+                // echo $filename;
+                $data['picture'] = "./Public/image/".$filename;
+            }
             if($tea ->where('id = %d',$id) -> save($data)){
                 $this -> redirect('index/teacherlist');
             }
             else{
-                $this -> error('修改失败');
+                $this -> error('修改失败,请检查内容是否做过修改');
             }
         }else {
             
@@ -108,7 +111,7 @@ class IndexController extends CommonController {
         if($tea -> delete($id)){
             $this -> redirect('index/teacherlist');
         }else {
-            $this -> error('删除失败','index/teacherlist',3);
+            $this -> error('删除失败，请稍后重试');
         }
 
     }
@@ -121,16 +124,19 @@ class IndexController extends CommonController {
             $data['name'] = I('post.name');
             $data['info'] = $_POST['info'];
             $data['class_id'] = intval(I('post.state'));
-            $ext = array_pop(explode('.',$_FILES['picture']['name']));       
-            $filename = date('YmdHis').rand(1000,9999).'.'.$ext;
-            move_uploaded_file($_FILES['picture']['tmp_name'],"./Public/image/".$filename);
-            // echo $filename;
-            $data['picture'] = "./Public/image/".$filename;
+            if($_FILES['picture']['error'] == 0){
+                $ext = array_pop(explode('.',$_FILES['picture']['name']));       
+                $filename = date('YmdHis').rand(1000,9999).'.'.$ext;
+                move_uploaded_file($_FILES['picture']['tmp_name'],"./Public/image/".$filename);
+                // echo $filename;
+                $data['picture'] = "./Public/image/".$filename;
+            }
+            
             
             if($tea->add($data)){
                 $this->redirect('index/teacherlist');
             }else {
-                $this -> error('添加失败','index/addtea',3);
+                $this -> error('添加失败');
             }
         }else{
             
@@ -139,8 +145,196 @@ class IndexController extends CommonController {
     }
 
     public function newsList(){
+        $news = M('news');
+        $arr = $news->join('news_class on news.class =news_class.class_id')->select();
+       
+        $this -> assign('arr',$arr);
         $this -> display('admin/newsList');
     }
 
+    public function editNews($id =''){
+        if(IS_POST){
+            $news = M('news');
+            $data['title'] = I('post.title');
+            $data['content'] = $_POST['content'];
+            $data['date'] = I('post.date');
+            $data['class'] = I('post.class');
+            /*dump(I('post.'));
+            exit;*/
+            if($_FILES['picture']['error'] == 0){
+                $ext = array_pop(explode('.',$_FILES['picture']['name']));       
+                $filename = date('YmdHis').rand(1000,9999).'.'.$ext;
+                move_uploaded_file($_FILES['picture']['tmp_name'],"./Public/image/".$filename);
+                // echo $filename;
+                $data['picture'] = "./Public/image/".$filename;
+            }
+            if(empty($id)){
+                if($news -> add($data)){
+                    $this -> redirect('index/newslist');
+                 }
+                else {
+                    $this -> error('上传失败，请检查（除图片外）是否有内容为空');
+                }
+            }
+            else{
+                if($news->where("id=$id")->save($data)){
+                    $this-> redirect('index/newslist');
+                }else {
+                    $this -> error('文章修改失败,内容未修改');
+                }
+            }
+            
+        
+        }
+        $this -> display('admin/showNews');
+    }
 
+    public function chState($id){
+        $news = M('news');
+        $state = $news -> where("id = %d",$id) -> getField('state');
+        $news ->state = $state==0?1:0;
+        $news -> where('id=%d',$id) ->save();
+        $this->redirect('index/newslist');
+
+    }
+    public function shownews($id = 0){
+        $news = M('news');
+        $arr = $news -> where("id = $id") -> find();
+        $this->assign('arr',$arr);
+        $this ->display('admin/showNews');
+    }
+
+    public function delnews($id){
+        $news = M('news');
+        if($news -> delete($id)){
+            $this -> redirect('index/newslist');
+        }
+
+    }
+    public function edulist(){
+        $edu = M('edu_pro');
+        $this->assign('arr',$edu -> select());
+        $this->display('admin/edulist');
+    }
+
+    public function editEdu($id = 0){
+        $edu = M('edu_pro');
+        if(IS_POST){
+            $data = array(
+                'date' => I('post.date'),
+                'content'=> $_POST['content'],
+                );
+            if($edu -> where("id = $id") -> save($data)){
+                $this -> redirect('index/edulist');
+            }
+            else{
+                $this -> error('内容未修改，请修改后提交');
+            }
+        }else{
+            $this-> assign('arr',$edu->where("id = $id") -> find());
+            $this -> display('admin/showEdu');  
+        }
+        
+    }
+
+    public function enForm(){
+        $config = array(  
+            'maxSize'    =>    3145728,
+            'savePath'   =>    '',
+            'saveName'   =>    'entryform',
+            'exts'       =>    array('docx',),
+            'autoSub'    =>    false,  
+            'replace'   => true,  
+            );
+        $upload = new \Think\Upload($config);
+        $info  = $upload -> upload();
+        if(!$info){
+            $this -> error($upload -> getError());
+        }else{
+            $this -> success('上传成功');
+        }
+    }
+
+    public function certificate(){
+        $cert = M('certificate');
+        $config = array(  
+            'maxSize'    =>    3145728,
+            'savePath'   =>    '',
+            'saveName'   =>    'certificate',
+            'exts'       =>    array('xlsx',),
+            'autoSub'    =>    false, 
+            'replace'   => true,    
+            );
+        $upload = new \Think\Upload($config);
+        $info  = $upload -> upload();
+
+        Vendor('Excel.PHPExcel');
+        $file = './Uploads/certificate.xlsx';
+
+        $obj = \PHPExcel_IOFactory::load($file);
+        $sheetCount = $obj ->getSheetCount();
+        $arr = array();
+        for($i = 0;$i <$sheetCount; $i++){
+            $data = $obj ->getSheet($i) -> toArray();
+            $arr = array_merge($arr,$data);
+        }
+        foreach ($arr as $k => $v) {
+            $data  = array(
+                'number' => $v[0],
+                'name' => $v[1],
+                'class' => $v[2],
+                );
+
+            $cert -> add($data);
+           
+        }
+        /*dump($arr);*/
+
+        if(!$info){
+            $this -> error($upload -> getError());
+        }else{
+            $this -> success('导入成功');
+        }
+    }
+
+   public function mcert(){
+        $cert = M('certificate');
+        $arr = $cert -> select();
+        $this -> assign('arr',$arr);
+        $this -> display('admin/certificate');
+   }
+
+   public function delCert($id){
+        $cert = M('certificate');
+        if($cert -> delete($id)){
+            $this -> redirect('index/mcert');
+        }
+   }
+
+   public function addCert(){
+        $cert = M(certificate);
+        if(IS_POST){
+            $data = array(
+                'number' => I('post.number'),
+                'name' => I('post.name'),
+                'class' => I('post.class')
+                );
+            if($cert -> add($data)){
+                $this->success('添加成功');
+            }
+        }
+   }
+   public function editCert($id){
+        $cert = M(certificate);
+        if(IS_POST){
+            $data = array(
+                'number' => I('post.number'),
+                'name' => I('post.name'),
+                'class' => I('post.class')
+                );
+            if($cert ->where("id= $id") -> save($data)){
+                $this->success('修改成功');
+            }
+        }
+   }
 }
