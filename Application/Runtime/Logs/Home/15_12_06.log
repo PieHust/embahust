@@ -1,0 +1,136 @@
+[ 2015-12-06T00:00:38+08:00 ] 222.20.73.28 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:00:49+08:00 ] 222.20.73.28 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-12-06T00:00:49+08:00 ] 222.20.73.28 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-12-06T00:01:27+08:00 ] ::1 /embahust/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') ORDER BY date desc LIMIT 7' at line 1
+ [ SQL语句 ] : SELECT `id`,`title`,`picture`,`date` FROM `news` WHERE ( class=1 AND picture<> ) ORDER BY date desc LIMIT 7  
+
+[ 2015-12-06T00:02:16+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:03:35+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:03:44+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:05:25+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:07:05+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:08:41+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:09:58+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:11:26+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:11:29+08:00 ] ::1 /embahust/searchcer.html?0.2962176895234734
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `certificate` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `certificate` WHERE ( number='dd' )  [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000804s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000868s ]
+
+[ 2015-12-06T00:11:36+08:00 ] ::1 /embahust/searchcer.html?0.5864753427449614
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002152s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003960s ]
+SQL: SHOW COLUMNS FROM `certificate` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `certificate` WHERE ( number='U201310348' )  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001575s ]
+
+[ 2015-12-06T00:11:51+08:00 ] ::1 /embahust/searchcer.html?0.16366774612106383
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000983s ]
+SQL: SHOW COLUMNS FROM `certificate` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `certificate` WHERE ( number='U201310348' )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000850s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000917s ]
+
+[ 2015-12-06T00:12:03+08:00 ] ::1 /embahust/searchcer.html?0.00869801826775074
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+SQL: SHOW COLUMNS FROM `certificate` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `certificate` WHERE ( number='huazhonkejidaxue ' )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000699s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000750s ]
+
+[ 2015-12-06T00:32:55+08:00 ] 222.20.51.123 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:33:16+08:00 ] 222.20.51.123 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:33:20+08:00 ] 222.20.51.123 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:33:29+08:00 ] 222.20.51.123 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:33:58+08:00 ] 222.20.51.123 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:34:18+08:00 ] 222.20.51.123 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:34:26+08:00 ] 222.20.51.123 /embahust/searchcer.html?0.6650772704742849
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+SQL: SHOW COLUMNS FROM `certificate` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `certificate` WHERE ( number='斤斤计较' )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000669s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000716s ]
+
+[ 2015-12-06T00:34:42+08:00 ] 222.20.51.123 /embahust/searchcer.html?0.20829276298172772
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001395s ]
+SQL: SHOW COLUMNS FROM `certificate` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `certificate` WHERE ( number='U201310348' )  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000669s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000719s ]
+
+[ 2015-12-06T00:39:27+08:00 ] 222.20.73.28 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:41:21+08:00 ] 222.20.73.28 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:41:24+08:00 ] 222.20.73.28 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:41:39+08:00 ] 222.20.73.28 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:43:00+08:00 ] 222.20.73.28 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T00:43:06+08:00 ] 222.20.73.28 /embahust/tea/
+ERR: 无法加载控制器:Tea
+
+[ 2015-12-06T00:43:27+08:00 ] 222.20.73.28 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+

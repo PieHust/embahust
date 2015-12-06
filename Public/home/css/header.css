@@ -110,7 +110,7 @@ html,body{
 .collect span a:hover{
 	color: red;
 }
-.search-box form{
+.search-box div{
 	position: relative;
 }
 .search{
@@ -191,6 +191,7 @@ html,body{
 #navigation ul{
 	margin: 0px auto;
 	width: 1080px;
+	overflow: hidden;
 }
 #navigation li{
 	display: inline-block;

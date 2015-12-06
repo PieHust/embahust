@@ -65,7 +65,6 @@ function btnChangePage(){
 	function changePage(number){
 		var temp = number * num;
 		var n = picLists.length - temp;
-		console.log(num);
 		newPage.innerHTML = number + 1;
 		for(var l = 0;l < picLists.length;l++){
 			picLists[l].style.display = "none";

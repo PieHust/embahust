@@ -9,11 +9,34 @@
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/formreset.css" />
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/template.css">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/teacher.css" />
-	
+
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/news.css" />
 	<link rel="stylesheet" href="__PUBLIC__/home/css/style.css">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/focus_box.css">
 	<script type="text/javascript" src="__PUBLIC__/home/js/jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.search-btn').click(function(event) {
+			
+				var value=$('.search').val();
+				$.ajax({
+					url: '{:U('/searchcer')}'+"?"+Math.random(),
+					type: 'post',
+					data: {number: value},
+					success:function(response){
+						response=eval(response);
+						var str ="";
+						if(response.length>0){
+							str = "姓名:"+response[0].name+"证书编号:"+response[0].number+"班级:"+response[0].number;
+							alert(str);
+						}else{
+							alert('没有证书信息，请检查输入是否正确。');
+						}
+					}
+				});
+			});
+		});
+	</script>
 </head>
 <body>
 	<!-- 代码开始 -->
@@ -83,10 +106,10 @@
 					</span>
 				</div>
 
-				<form action="###" methon="###">
-					<input type="text" value="" placeholder="输入证书编号查询" name="###" class="search" />
+				<div>
+					<input type="text"  placeholder="输入证书编号查询" name="number" class="search" />
 					<input type="submit" value="" class="search-btn" /> <i class="fa fa-search dingwei"></i>
-				</form>
+				</div>
 			</div>
 			<!-- search-box end-->
 		</div>

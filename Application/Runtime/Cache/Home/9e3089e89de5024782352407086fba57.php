@@ -1,8 +1,7 @@
-<?php if (!defined('THINK_PATH')) exit();?>
-	<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
-	<title>人才培训</title>
+	<title>首页</title>
 
 	<meta charset="UTF-8" />
 	<link rel="stylesheet" type="text/css" href="/embahust/Public/home/css/header.css" />
@@ -203,115 +202,189 @@
 		</ul>
 
 	</div>
-
-	<div class="main-body">
+<div id="focus_Box">
+	<span class="prev">&nbsp;</span>
+	<span class="next">&nbsp;</span>
+	<ul id = "Box_ul">
+		<?php foreach($hot as $v):?>
+		<li class = "Box_li">
+			<a href=<?php echo U('/'.$v['name']."/".$v['class']."/".$v['id']);?>>
+				<img  src=<?="/embahust".$v['picture']?> title=<?php echo ($v["title"]); ?> />
+			</a>
+		</li>
+	<?php endforeach;?>
 		
-	<div class="top-pic">
-		<img src="/embahust/Public/home/image/train.jpg" style="width: 980px;height: 200px;" />
-	</div>
+	</ul>
+</div>
 
-		<div class="left-side-bar">
-			
-	<div class="top-bar">
-		<p>人才培训</p>
-		<ul>
-			<li>
-				<a href="<?php echo U('/tra/1');?>">企业内训</a>
-			</li>
-			<li>
-				<a href="<?php echo U('/tra/2');?>">干部培训</a>
-			</li>
-			<li>
-				<a href="<?php echo U('/tra/3');?>">行业定制</a>
-			</li>
-		</ul>
-	</div>
+<div id = "content_Div">
 
-			
-				<div class="middle-bar">
-				<p>招生信息</p>
-				<ul>
-				<?php foreach($entArr as $k=>$v):?>
-					<li>
-						<a href=<?php echo U('/news/3/'.$v['id']);?>><span style="font-size:14px;color:red;font-weight:800;">[HOT]</span><?php echo ($v["title"]); ?></a>
+	<div id = "announce_Div">
+		<div class = "right-top_div">
+			<span>
+				<bold>通知公告</bold>
+			</span>
+			<a href="<?php echo U('/news/2');?>">更多...</a>
+		</div>
+
+		<div class = "right-bottom_div">
+			<ul>
+				<?php foreach($arr2 as $k=>$v):?>
+				<li>
+					<span class = "rightSpan">【最新】</span>
+					<a href="<?php echo U('/news/2/'.$v['id']);?>"><?php echo ($v["title"]); ?></a>
+					<span class = "liDate"><?php echo ($v["date"]); ?></span>
 					</li>
 				<?php endforeach;?>
-				</ul>
-			</div>
-			
-			
-				<div class="rank-bar">
-					<p>点击排行榜</p>
-					<ul>
-						<?php foreach($rankArr as $k=>$v):?>
-						<li>
-							<span style="font-size:14px;"><?php echo ++$i;?></span>
-					<a href=<?php echo U("/".$v['name']."/".$v['class']."/".$v['id']);?> ><?php echo ($v["title"]); ?></a>
-						</li>
-						<?php endforeach;?>
 
+			</ul>
+		</div>
+	</div>
+
+	<div class = "left_Div" id = "left_Div_first">
+		<div class = "left-top_div">
+			<span class = "head">
+				<bold>新闻咨询</bold>
+			</span>
+			<a href="<?php echo U('/news/1');?>" class = "topA">更多...</a>
+		</div>
+
+		<div class = "left-bottom_div">
+
+			<div class="case1" >
+				<div id="slider1" class="case_box1">
+					<ul>
+					<?php foreach($arr1 as $k=>$v):?>
+						<?php if(!empty($v['picture'])):?>
+						<li>
+							<a href=<?php echo U('/news/1'.$v['id']);?>>
+								<img src=<?="/embahust".substr($v['picture'], 1)?> title=<?php echo ($v["title"]); ?>></a>
+						</li>
+					<?php endif;?>
+					<?php endforeach;?>
+						
 					</ul>
 				</div>
-			
-		</div>
-
-		<div class="content-wrap">
-			<p class="location">
-				<span>您现在的位置&nbsp;:</span>
-				<a href=<?php echo U('/index');?>>首页</a>
-				&nbsp;&nbsp;>&nbsp;&nbsp;
-				
-	<a href="">人才培训</a>
-
-
-			</p>
-			<!-- location end -->	
-			<div class="sign-up">
-				<span>招生火热进行中...</span>
-				<a href="/embahust/Uploads/entryform.docx">报名表下载</a>
-			</div>
-			<!-- sign-up end -->
-			
-	<div class="news-wrap">
-				<div class="news-box">
-					<ul class="news" id="pics-lists">
-					<?php foreach($arr as $v):?>
-						<li>
-							<a href="<?php echo U("/tra/$id/".$v['id']);?>">● <?php echo ($v["title"]); ?></a><span><?php echo ($v["date"]); ?></span>
-						</li>
-					<?php endforeach;?>
-
-		
-					</ul><!-- pics-wrapper end -->
-
-					<!--清除浮动-->
-					<div style="height: 0px; clear: both;"></div>
-
-					<p id="button-wrapper" class="btn-wrap">
-						<button>首页</button>
-						<button class="previous-page">上一页</button>
-						<button>下一页</button>
-						<button>尾页</button>&nbsp;&nbsp;
-						页码&nbsp;:&nbsp;<span>1</span>&nbsp;/&nbsp;<span>6</span>
-					</p><!-- btn-wrap end -->
-				</div><!-- teacher-pics end -->
-
-				<div class="other-info">
-					<p class="contact-info">华中科技大学高级研修班即将开班，期待你的加入</p>
-					<p class="contact-info">咨询电话&nbsp;:&nbsp;027-87540112</p>
-					<p class="contact-info" style="padding-bottom: 40px;">地址&nbsp;:&nbsp;华中科技大学国学研究院文化中心</p>
-				</div>
-
 			</div>
 
-			<!-- main-content end -->	
+			<ul class = "aList">
+				<?php foreach($arr1 as $k=>$v):?>
+				<li>
+					<a href=<?php echo U('/news/1'.$v['id']);?>><?php echo ($v["title"]); ?></a>
+					<span class = "liDate"><?php echo ($v["date"]); ?></span>
+					</li>
+				<?php endforeach;?>
+			</ul>
+
 		</div>
-		<!-- main-content end -->	
-		<!--清除浮动-->	
-		<div style="height: 0px; clear: both;"></div>
 	</div>
-	
-<script type="text/javascript" src="/embahust/Public/home/js/changepage.js"></script>
+
+	<div id = "img_Div">
+		<div id = "img_top_div">
+			<span id = "top_teacher_span">院校名师</span>
+			<span id = "top_expert_span">实战专家</span>
+		</div>
+
+		<div class = "img_bottom_div" id = "img_teacher">
+		<?php foreach($tea1 as $v):?>
+			<div style="margin-bottom:20px;">
+			<a href="<?php echo U('/tea/1/'.$v['id']);?>"><img src=<?="/embahust".substr($v['picture'], 1)?> title=<?php echo ($v["name"]); ?>  style="width:110px;height:142px;">
+				<br></a>
+			</div>
+		<?php endforeach;?>
+			
+		</div>
+
+		<div class = "img_bottom_div" id = "img_expert">
+			<?php foreach($tea2 as $v):?>
+			<div>
+			<a href="<?php echo U('/tea/2/'.$v['id']);?>"><img src=<?="/embahust".substr($v['picture'], 1)?> title=<?php echo ($v["name"]); ?>  style="width:110px;height:142px;">
+				<br></a>
+				
+				
+			</div>
+		<?php endforeach;?>
+		</div>
+
+	</div>
+
+	<div class = "left_Div">
+		<div class = "left-top_div">
+			<span class = "head">
+				<bold>招生信息</bold>
+			</span>
+			<a href="<?php echo U('/news/3');?>" class = "topA">更多...</a>
+		</div>
+
+		<div class = "left-bottom_div">
+
+			<div class="case" >
+				<div id="slider" class="case_box">
+					<ul>
+						
+						<?php foreach($arr3 as $k=>$v):?>
+						<?php if(!empty($v['picture'])):?>
+						<li>
+							<a href=<?php echo U('/news/3'.$v['id']);?>>
+								<img src=<?="/embahust".substr($v['picture'], 1)?> title=<?php echo ($v["title"]); ?>></a>
+						</li>
+					<?php endif;?>
+					<?php endforeach;?>
+						
+					</ul>
+				</div>
+			</div>
+
+			<ul class = "aList">
+				
+				<?php foreach($arr3 as $k=>$v):?>
+				<li>
+					<a href=<?php echo U('/news/3'.$v['id']);?>><?php echo ($v["title"]); ?></a>
+					<span class = "liDate"><?php echo ($v["date"]); ?></span>
+					</li>
+				<?php endforeach;?>
+							</ul>
+
+		</div>
+	</div>
+
+	<div class = "left_Div">
+		<div class = "left-top_div">
+			<span class = "head">
+				<bold>人才培训</bold>
+			</span>
+			<a href="<?php echo U('/tra/1');?>" class = "topA">更多...</a>
+		</div>
+
+		<div class = "left-bottom_div">
+			<div class="case2" >
+				<div id="slider2" class="case_box2">
+					<ul>
+						<?php foreach($arr4 as $k=>$v):?>
+						<?php if(!empty($v['picture'])):?>
+						<li>
+							<a href=<?php echo U('/tra/1'.$v['id']);?>>
+								<img src=<?="/embahust".substr($v['picture'], 1)?> title=<?php echo ($v["title"]); ?>></a>
+						</li>
+					<?php endif;?>
+					<?php endforeach;?>
+					</ul>
+				</div>
+			</div>
+			<ul class = "aList">
+				<?php foreach($arr4 as $k=>$v):?>
+				<li>
+					<a href=<?php echo U('/tra/1'.$v['id']);?>><?php echo ($v["title"]); ?></a>
+					<span class = "liDate"><?php echo ($v["date"]); ?></span>
+					</li>
+				<?php endforeach;?>
+							</ul>
+
+		</div>
+	</div>
+
+</div>
+<script type="text/javascript" src ="/embahust/Public/home/js/ZoomPic.js"></script>
 	<div id="footer">
 		<div class="footer-wrap">
 			<div class="footer-wrap-content">

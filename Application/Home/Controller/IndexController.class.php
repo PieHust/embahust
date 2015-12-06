@@ -41,7 +41,7 @@ class IndexController extends Controller {
     protected function indexInfo($table,$class){
         $obj = M($table);
         return $obj->order('date desc')
-                   ->where('class=%d',$class)
+                   ->where("class=%d AND picture<>'%s'", $class,'')
                    ->limit(7)
                    ->field('id,title,picture,date')
                    ->select();
@@ -240,7 +240,15 @@ class IndexController extends Controller {
         $this ->display();
     }
 
-    public function test(){}
+    public function searchCer(){
+        if(!empty(I('post.number'))){
+            $cer =M('certificate');
+            $arr = $cer->where("number='%s'",I('post.number'))->select();
+            echo json_encode($arr);
+        }else{
+            echo json_encode([]);
+        }
+    }
 
 
 }

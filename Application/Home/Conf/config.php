@@ -17,7 +17,7 @@ return array(
 		'stu/:id\d' => 'index/stulist',
 		'info'	=> 'index/info',
 		'entry'	=> 'index/entry',
-		'test1'	=> 'index/test',
+		'searchcer'	=> 'index/searchcer',
 		),
 
 );

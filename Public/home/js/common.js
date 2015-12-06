@@ -145,3 +145,7 @@ var collect = document.getElementById("addfavorite");
             }
         }
     }
+
+/**
+ * ajax搜索查询证书
+ */

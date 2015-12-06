@@ -10,11 +10,34 @@
 	<link rel="stylesheet" type="text/css" href="/embahust/Public/home/css/formreset.css" />
 	<link rel="stylesheet" type="text/css" href="/embahust/Public/home/css/template.css">
 	<link rel="stylesheet" type="text/css" href="/embahust/Public/home/css/teacher.css" />
-	
+
 	<link rel="stylesheet" type="text/css" href="/embahust/Public/home/css/news.css" />
 	<link rel="stylesheet" href="/embahust/Public/home/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/embahust/Public/home/css/focus_box.css">
 	<script type="text/javascript" src="/embahust/Public/home/js/jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.search-btn').click(function(event) {
+				alert($('.search').val());
+				var value=$('.search').val();
+				$.ajax({
+					url: '<?php echo U('/searchcer');?>'+"?"+Math.random(),
+					type: 'post',
+					data: {number: value},
+					success:function(response){
+						response=eval(response);
+						var str ="";
+						if(response[0].id!=''){
+							str = "姓名:"+response[0].name+"证书编号:"+response[0].number+"班级:"+response[0].number;
+							alert(str);
+						}else{
+							alert('没有信息，请检查输入是否正确。');
+						}
+					}
+				});
+			});
+		});
+	</script>
 </head>
 <body>
 	<!-- 代码开始 -->
@@ -84,10 +107,10 @@
 					</span>
 				</div>
 
-				<form action="###" methon="###">
-					<input type="text" value="" placeholder="输入证书编号查询" name="###" class="search" />
+				<div>
+					<input type="text"  placeholder="输入证书编号查询" name="number" class="search" />
 					<input type="submit" value="" class="search-btn" /> <i class="fa fa-search dingwei"></i>
-				</form>
+				</div>
 			</div>
 			<!-- search-box end-->
 		</div>
