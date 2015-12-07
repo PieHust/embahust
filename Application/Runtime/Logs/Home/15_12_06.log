@@ -134,3 +134,133 @@ ERR: 无法加载控制器:Tea
 [ 2015-12-06T00:43:27+08:00 ] 222.20.73.28 /embahust/undefined
 ERR: 无法加载控制器:Undefined
 
+[ 2015-12-06T11:19:58+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T11:20:06+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T11:21:22+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T11:23:04+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T11:23:32+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T11:23:40+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T11:24:09+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T11:24:18+08:00 ] ::1 /embahust/searchcer.html?0.7138082280289382
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000845s ]
+SQL: SHOW COLUMNS FROM `certificate` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `certificate` WHERE ( number='U201310348' )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000708s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000755s ]
+
+[ 2015-12-06T11:25:52+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T11:26:01+08:00 ] ::1 /embahust/searchcer.html?0.08860677829943597
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002939s ]
+SQL: SHOW COLUMNS FROM `certificate` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `certificate` WHERE ( number='U201310348' )  [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001530s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001697s ]
+
+[ 2015-12-06T11:26:23+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T11:26:39+08:00 ] ::1 /embahust/searchcer.html?0.9858550814480979
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000786s ]
+SQL: SHOW COLUMNS FROM `certificate` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `certificate` WHERE ( number='U201310348' )  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001152s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001254s ]
+
+[ 2015-12-06T11:26:50+08:00 ] ::1 /embahust/searchcer.html?0.7999187261120356
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001272s ]
+SQL: SHOW COLUMNS FROM `certificate` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `certificate` WHERE ( number='fda沙发上' )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000917s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000996s ]
+
+[ 2015-12-06T11:27:20+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T11:27:30+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T15:26:50+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T15:26:58+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T22:05:58+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T22:06:11+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-06T22:06:44+08:00 ] ::1 /embahust/searchcer.html?0.3129931262228638
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002114s ]
+SQL: SHOW COLUMNS FROM `certificate` [ RunTime:0.0084s ]
+SQL: SELECT * FROM `certificate` WHERE ( number='U201310348' )  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001153s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001264s ]
+
+[ 2015-12-06T22:06:58+08:00 ] ::1 /embahust/searchcer.html?0.3114641399588436
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000436s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000478s ]
+
+[ 2015-12-06T22:07:00+08:00 ] ::1 /embahust/searchcer.html?0.930211388040334
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000485s ]
+
+[ 2015-12-06T22:07:06+08:00 ] ::1 /embahust/searchcer.html?0.7052491689100862
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000773s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000486s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2015-12-06T22:07:08+08:00 ] ::1 /embahust/searchcer.html?0.8407812374643981
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000565s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000616s ]
+
+[ 2015-12-06T22:07:13+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+

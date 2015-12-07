@@ -27,7 +27,7 @@
 						response=eval(response);
 						var str ="";
 						if(response.length>0){
-							str = "姓名:"+response[0].name+"证书编号:"+response[0].number+"班级:"+response[0].number;
+							str = "姓名:"+response[0].name+"证书编号:"+response[0].number+"班级:"+response[0].class;
 							alert(str);
 						}else{
 							alert('没有证书信息，请检查输入是否正确。');

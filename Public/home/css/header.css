@@ -190,7 +190,7 @@ html,body{
 }
 #navigation ul{
 	margin: 0px auto;
-	width: 1080px;
+	width: 944px;
 	overflow: hidden;
 }
 #navigation li{
@@ -201,6 +201,7 @@ html,body{
 }
 #navigation li dt a{
 	line-height: 40px;
+	box-sizing:border-box;
 	width: 110px;
 	height: 40px;
 	text-align: center;
