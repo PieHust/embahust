@@ -23,7 +23,7 @@ class LoginController extends Controller{
 		}
 		layout(false); 
 		$this->assign('error',$error);
-		$this->display('admin/login');
+		$this->display('Admin/login');
 	}
 
 	public function verify(){

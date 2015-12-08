@@ -5,7 +5,7 @@ use Think\Controller;
 class IndexController extends CommonController {
 
     public function index(){
-    	$this->display('admin/index');
+    	$this->display('Admin/index');
     }
 
     public function xiugai(){
@@ -23,7 +23,7 @@ class IndexController extends CommonController {
     			}else{
     				$error = '初始化失败，原密码输入错误';
     				$this -> assign('error',$error);
-    				$this -> display('admin/index');
+    				$this -> display('Admin/index');
     			}
     			
     		}
@@ -35,7 +35,7 @@ class IndexController extends CommonController {
 				}else {
 					$error = '原密码输入错误,修改密码失败';
 					$this -> assign('error',$error);
-    				$this -> display('admin/index');
+    				$this -> display('Admin/index');
 				}
 
 			}		
@@ -49,7 +49,7 @@ class IndexController extends CommonController {
         $enrol = M('enrol');
         $arr = $enrol -> select();
         $this -> assign('arr',$arr);
-        $this->display('admin/enrol');
+        $this->display('Admin/enrol');
     }
 
     public function delEnrol($id){
@@ -66,7 +66,7 @@ class IndexController extends CommonController {
             $enrol = M('enrol');
             $arr = $enrol -> find($id);
             $this->assign('arr',$arr);
-            $this->display('admin/showEnrol'); 
+            $this->display('Admin/showenrol'); 
     }
 
     public function teacherList(){
@@ -74,7 +74,7 @@ class IndexController extends CommonController {
        
         $arr = $tea -> select();
         $this -> assign('arr',$arr);
-        $this -> display('admin/teacherList');
+        $this -> display('Admin/teacherlist');
     }
 
     public function showTea($id){
@@ -101,7 +101,7 @@ class IndexController extends CommonController {
             
             $arr = $tea -> find($id);
             $this -> assign('arr',$arr);
-            $this -> display('admin/showTea');   
+            $this -> display('Admin/showtea');   
         }
        
     }
@@ -140,7 +140,7 @@ class IndexController extends CommonController {
             }
         }else{
             
-            $this->display('admin/addTea');
+            $this->display('Admin/addtea');
         }
     }
 
@@ -149,7 +149,7 @@ class IndexController extends CommonController {
         $arr = $news->join('news_class on news.class =news_class.class_id')->select();
        
         $this -> assign('arr',$arr);
-        $this -> display('admin/newsList');
+        $this -> display('Admin/newslist');
     }
 
     public function editNews($id =''){
@@ -186,7 +186,7 @@ class IndexController extends CommonController {
             
         
         }
-        $this -> display('admin/showNews');
+        $this -> display('Admin/shownews');
     }
 
     public function chState($id){
@@ -201,7 +201,7 @@ class IndexController extends CommonController {
         $news = M('news');
         $arr = $news -> where("id = $id") -> find();
         $this->assign('arr',$arr);
-        $this ->display('admin/showNews');
+        $this ->display('Admin/shownews');
     }
 
     public function delnews($id){
@@ -214,7 +214,7 @@ class IndexController extends CommonController {
     public function edulist(){
         $edu = M('edu_pro');
         $this->assign('arr',$edu -> select());
-        $this->display('admin/edulist');
+        $this->display('Admin/edulist');
     }
 
     public function editEdu($id = 0){
@@ -232,7 +232,7 @@ class IndexController extends CommonController {
             }
         }else{
             $this-> assign('arr',$edu->where("id = $id") -> find());
-            $this -> display('admin/showEdu');  
+            $this -> display('Admin/showedu');  
         }
         
     }
@@ -301,7 +301,7 @@ class IndexController extends CommonController {
         $cert = M('certificate');
         $arr = $cert -> select();
         $this -> assign('arr',$arr);
-        $this -> display('admin/certificate');
+        $this -> display('Admin/certificate');
    }
 
    public function delCert($id){

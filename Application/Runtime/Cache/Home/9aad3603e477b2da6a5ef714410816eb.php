@@ -28,7 +28,7 @@
 						response=eval(response);
 						var str ="";
 						if(response.length>0){
-							str = "姓名:"+response[0].name+"证书编号:"+response[0].number+"班级:"+response[0].number;
+							str = "姓名:"+response[0].name+"证书编号:"+response[0].number+"班级:"+response[0].class;
 							alert(str);
 						}else{
 							alert('没有证书信息，请检查输入是否正确。');
@@ -320,8 +320,8 @@
 	
 <script type="text/javascript" src="/embahust/Public/home/js/changepage.js"></script>
 	<div id="footer">
-		<div class="footer-wrap">
-			<div class="footer-wrap-content">
+		<div class="footer-wrap"style="position:relative;">
+			<div class="footer-wrap-content" >
 				<p>
 					友情链接&nbsp;:
 					<a href="http://www.hust.edu.cn" target="blank">华中科技大学</a>
@@ -329,7 +329,9 @@
 				</p>
 				<p>地址&nbsp;: 武汉市洪山区珞瑜路1037号</p>
 			</div>
-			<img src="/embahust/Public/home/image/erweima.jpg" style="width: 68px; height: 68px;" />
+			<img id="erweima"src="/embahust/Public/home/image/weixing-ma.jpg" style="width: 68px; height: 68px;" />
+			<div id="lgerweima"style="position:absolute; border-radius:4px;box-shadow:0 0 5px red;width:200px;height:200px;left:250px;top:-100px;display:none;"> <img src="/embahust/Public/home/image/weixing-ma.jpg" alt="" style="width:200px;height:200px;margin:0px;">
+			</div>
 		</div>
 		<!-- footer-wrap end -->
 	</div>
@@ -353,6 +355,11 @@
 		$('.rank-bar a').eq(0).css({
 			'color': '#d83333',
 			'font-weight':"bolder"
+		});
+		$("#erweima").hover(function() {
+			$("#lgerweima").fadeIn(500);
+		}, function() {
+			$("#lgerweima").fadeOut(500);
 		});
 		
 	});
