@@ -7,7 +7,7 @@
 			<?php foreach($hot as $v):?>
 			<li>
 				<a href={:U('/'.$v['name']."/".$v['class']."/".$v['id'])}>
-					<img  src=<?="__APP__".$v['picture']?>
+					<img  src=<?="__APP__".substr($v['picture'], 1)?>
 					title="{$v.title}" />
 					<div class='navTitle'>{$v.title}</div>
 				</a>
