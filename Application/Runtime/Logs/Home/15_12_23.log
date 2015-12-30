@@ -1,0 +1,79 @@
+[ 2015-12-23T08:14:30+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:14:40+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:14:49+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:15:27+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:18:13+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:18:22+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:18:39+08:00 ] ::1 /embahust/searchcer.html?0.03939637332223356
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000963s ]
+SQL: SHOW COLUMNS FROM `certificate` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `certificate` WHERE ( number='U201310348' )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000763s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000831s ]
+
+[ 2015-12-23T08:34:08+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:38:37+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:38:51+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:40:21+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:40:39+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:41:31+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:41:36+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:42:45+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:42:51+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:43:36+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:44:37+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:44:43+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:44:47+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T08:45:00+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T09:27:17+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T09:31:26+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+
+[ 2015-12-23T09:42:01+08:00 ] ::1 /embahust/undefined
+ERR: 无法加载控制器:Undefined
+

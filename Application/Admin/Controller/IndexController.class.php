@@ -259,7 +259,7 @@ class IndexController extends CommonController {
         $cert = M('certificate');
         $config = array(  
             'maxSize'    =>    3145728,
-            'savePath'   =>    '',
+            'savePath'   =>    './Public/Uploads/',
             'saveName'   =>    'certificate',
             'exts'       =>    array('xlsx',),
             'autoSub'    =>    false, 
@@ -269,7 +269,7 @@ class IndexController extends CommonController {
         $info  = $upload -> upload();
 
         Vendor('Excel.PHPExcel');
-        $file = './Uploads/certificate.xlsx';
+        $file = './Public/Uploads/certificate.xlsx';
 
         $obj = \PHPExcel_IOFactory::load($file);
         $sheetCount = $obj ->getSheetCount();

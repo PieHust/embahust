@@ -46,6 +46,14 @@ class IndexController extends Controller {
                    ->field('id,title,picture,date')
                    ->select();
     }
+	protected function indexInfo2($table,$class){
+        $obj = M($table);
+        return $obj->order('date desc')
+                   ->where("class=%d ", $class)
+                   ->limit(7)
+                   ->field('id,title,picture,date')
+                   ->select();
+    }
 
     protected function indexTea($id){
         $obj = M('teacher');
@@ -54,14 +62,25 @@ class IndexController extends Controller {
                     ->field('name,picture,id')
                     ->select();
     }
+	
+	protected function speSearch($table,$class){
+		$obj = M($table);
+		$map['class'] = array(array('elt',$class),array('egt',$class-2));
+		$map['picture'] = array('neq','');
+		return $obj -> order('date desc')
+					-> where($map)
+					-> limit(7)
+                    -> field('id,title,picture,date,class')
+                    -> select();
+	}
     
     public function index(){
     	$li = "first";
     	$this-> li=$li;
         $this->arr1 = $this -> indexInfo('news',1);
-        $this->arr2 = $this -> indexInfo('news',2);
-        $this->arr3 = $this -> indexInfo('news',3);
-        $this->arr4 = $this -> indexInfo('news',7);
+        $this->arr2 = $this -> indexInfo2('news',2);
+        $this->arr3 = $this -> speSearch('news',6);
+        $this->arr4 = $this -> speSearch('news',9);
         $this->tea1 = $this -> indexTea(1);
         $this->tea2 = $this -> indexTea(2);
         $this->hot = $this -> indexHot();

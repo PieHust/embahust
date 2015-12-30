@@ -210,7 +210,7 @@
 			<?php foreach($hot as $v):?>
 			<li>
 				<a href=<?php echo U('/'.$v['name']."/".$v['class']."/".$v['id']);?>>
-					<img  src=<?="/embahust".$v['picture']?>
+					<img  src=<?="/embahust".substr($v['picture'], 1)?>
 					title="<?php echo ($v["title"]); ?>" />
 					<div class='navTitle'><?php echo ($v["title"]); ?></div>
 				</a>
@@ -276,15 +276,16 @@
 	<div class="comleft" style="margin-top:0px;">
 		<div class="comleft left  theborder">
 			<div class='section-bar'>
-				<span>&nbsp;&nbsp;招生信息</span>
-				<a href="<?php echo U('/news/3');?>">更多</a>
+				<span>&nbsp;&nbsp;教育项目</span>
+				<a href="<?php echo U('/edu/1');?>">更多</a>
 			</div>
 			<div id="demo2" class="slideBox">
 				<ul class="items">
 					<?php foreach($arr3 as $k=> $v):?>
 					<?php if(!empty($v['picture'])):?>
+					<?php  switch($v['class']){ case 4:$v['class'] = 1;break; case 5:$v['class'] = 2;break; case 6:$v['class'] = 3;break; }; ?>
 					<li>
-						<a href=<?php echo U('/news/3/'.$v['id']);?>>
+						<a href=<?php echo U('/edu/'.$v['class'].'/'.$v['id']);?>>
 							<img src=<?="/embahust".substr($v['picture'], 1)?>
 							title=<?php echo ($v["title"]); ?> style="padding:10px;"width=260 height="225">
 						</a>
@@ -295,8 +296,9 @@
 			<div class="rightText">
 				<ul>
 					<?php foreach($arr3 as $k=> $v):?>
+					<?php  switch($v['class']){ case 4:$v['class'] = 1;break; case 5:$v['class'] = 2;break; case 6:$v['class'] = 3;break; }; ?>
 					<li>
-						<a href=<?php echo U('/news/3/'.$v['id']);?>>
+						<a href=<?php echo U('/edu/'.$v['class'].'/'.$v['id']);?>>
 							<span class='span1'><?php echo ($v["title"]); ?></span>
 							<span class = "span2"><?php echo ($v["date"]); ?></span>
 						</a>
@@ -307,15 +309,16 @@
 		</div>
 		<div class="comleft left  theborder">
 			<div class='section-bar'>
-				<span>&nbsp;&nbsp;企业内训</span>
+				<span>&nbsp;&nbsp;人才培训</span>
 				<a href="<?php echo U('/tra/1');?>">更多</a>
 			</div>
 			<div id="demo3" class="slideBox">
 				<ul class="items">
 					<?php foreach($arr4 as $k=> $v):?>
 					<?php if(!empty($v['picture'])):?>
+					<?php  switch($v['class']){ case 7:$v['class'] = 1;break; case 8:$v['class'] = 2;break; case 9:$v['class'] = 3;break; }; ?>
 					<li>
-						<a href=<?php echo U('/tra/1/'.$v['id']);?>>
+						<a href=<?php echo U('/tra/'.$v['class'].'/'.$v['id']);?>>
 							<img src=<?="/embahust".substr($v['picture'], 1)?>
 							title=<?php echo ($v["title"]); ?> style="padding:10px;"width=260 height="225">
 						</a>
@@ -326,8 +329,9 @@
 			<div class="rightText">
 				<ul>
 					<?php foreach($arr4 as $k=> $v):?>
+					<?php  switch($v['class']){ case 7:$v['class'] = 1;break; case 8:$v['class'] = 2;break; case 9:$v['class'] = 3;break; }; ?>
 					<li>
-						<a href=<?php echo U('/tra/1/'.$v['id']);?>>
+						<a href=<?php echo U('/tra/'.$v['class'].'/'.$v['id']);?>>
 							<span class='span1'><?php echo ($v["title"]); ?></span>
 							<span class = "span2"><?php echo ($v["date"]); ?></span>
 						</a>

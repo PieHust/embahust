@@ -2,7 +2,7 @@
 	<!DOCTYPE html>
 <html>
 <head>
-	<title>新闻资讯</title>
+	<title>教育项目</title>
 
 	<meta charset="UTF-8" />
 	<link rel="stylesheet" type="text/css" href="/embahust/Public/home/css/header.css" />
@@ -213,16 +213,16 @@
 		<div class="left-side-bar">
 			
 	<div class="top-bar">
-		<p>新闻资讯</p>
+		<p>教育项目</p>
 		<ul>
 			<li>
-				<a href="<?php echo U('/news/1');?>">新闻资讯</a>
+				<a href="<?php echo U('/edu/1');?>">国学大讲堂</a>
 			</li>
 			<li>
-				<a href="<?php echo U('/news/2');?>">通知公告</a>
+				<a href="<?php echo U('/edu/2');?>">精品研修班</a>
 			</li>
 			<li>
-				<a href="<?php echo U('/news/3');?>">招生信息</a>
+				<a href="<?php echo U('/edu/3');?>">职业训练营</a>
 			</li>
 		</ul>
 	</div>
